@@ -25,3 +25,7 @@ Firmware and APE images acquired from Lunars.
 Static findings use an ICE-based CID artifact and an older HW2.5 APE artifact. Modern candidates come from a separately recovered signal database. Original artifacts and database redistribution permissions are not established, so binaries, bulk definitions and decompilation exports remain excluded.
 
 Live results are derived summaries of privately retained captures. Artifact availability and hardware limits are described in [methodology](methodology.md#artifact-availability).
+
+## Recovered CH signal profiles
+
+[tesla_can_signals](https://github.com/talas9/tesla_can_signals) is the verified repository origin recorded for the two recovered CH profile files used in consolidation. Their identical contents describe26messages and39unique signals, represented as78profile rows. Hardware and firmware identity are unknown; a directory label conflicts with the declared product label. The retained checkout reference does not prove file membership in that commit. This repository is distinct from the separately recovered canonical modern signal database; the latter is not attributed to this repository. Neither establishes current HW4 compatibility. No bulk definitions are republished here.
