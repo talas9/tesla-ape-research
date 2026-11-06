@@ -1,6 +1,6 @@
-# Complete route index
+# Route index
 
-This is an index of investigated and open routes, not an assertion of complete recursive closure. Stable IDs permit discussion without disclosing private artifacts or identities.
+Each route records the recovered result and the next missing link.
 
 | Route | Scoped finding/status | Detail / next boundary |
 |---|---|---|
@@ -23,7 +23,7 @@ This is an index of investigated and open routes, not an assertion of complete r
 | R17 Assist | Modification/submission behavior recovered. | Different from GUI full-FSD selection or unlock. |
 | R18 Hardware applicability | HW4 live, historical HW3 and HW2.5 source kept distinct. | [Matrix](research-paper.md#hardware-and-applicability-matrix). |
 | R19 Passive diagnostics | Local implementation verified, not deployed. | [Implementation](evidence-and-open-work.md#implementation-state). |
-| R20 Deployment | Pending separately routed action. | No new diagnostic on-device results. |
+| R20 Deployment | Not deployed. | Device validation remains. |
 | R21 Debug setter | Generic setter/access path partly recovered. | Authoritative GUI propagation/viable override not proved. |
 | R22 EU/DCAS/restart | Feature policy and conditional restart path partly recovered. | External sender/concrete runtime dependencies remain. |
 | R23 Modern specification | Bounded extraction/review completed. | Candidate meanings, not matching HW4 decoder proof. |
@@ -38,4 +38,4 @@ This is an index of investigated and open routes, not an assertion of complete r
 | R32 Consolidation | Verification and independent review complete; no blocking findings. | [Profiles](signal-profiles.md); source network/provenance retained separately. |
 | R33 Hardware inference | Not implemented; raw enum unresolved. | Preserve manual hardware selection. |
 | R34 Follow-up sweep | Interrupted; original settings restored by verified recovery. | [Recovery](experiments.md#interrupted-follow-up-and-recovery); remaining cases not run. |
-| R35 Upstream interactions | Bounded source review completed. | [References](sources.md); upstream reports are not my current-car proof. |
+| R35 Upstream interactions | Bounded source review completed. | [References](sources.md); reports remain attributed upstream. |

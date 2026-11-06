@@ -1,39 +1,40 @@
-# Evidence scope and open work
+# Evidence and next work
 
-## Evidence classes
+## Reading the findings
 
-| Class | Meaning |
+| Label | Meaning |
 |---|---|
-| Recovered | Bounded static branch or producer/consumer path in a named inspected image. |
-| Observed | Derived current-car capture result, with unknown RX producer/own-TX visibility. |
-| Reported | User/upstream observation or another lane's tool/test result; attributed accordingly. |
-| Candidate | Layout/meaning awaits matching current hardware/version validation. |
-| Open | Missing artifact, causal edge, semantic meaning or pending report. |
+| Recovered | Static branch or producer/consumer path in an inspected image. |
+| Observed | Live capture result; RX producer and own-TX visibility may be unknown. |
+| Reported | Attributed user, upstream or tool/test report. |
+| Candidate | Layout or meaning awaiting matching hardware validation. |
+| Open | Missing artifact, causal edge or semantic meaning. |
 
-Private raw exports/captures remain excluded. Not every reported address has a retained raw export. Test/build totals below are separate snapshots, not additive counts.
+Raw captures and original artifacts remain private. Some reported addresses lack retained raw exports; the public notes are summaries rather than a standalone reproduction package.
 
 ## Implementation state
 
-- Host CLI:42 targeted offline tests; reviewer 35; read-only live status/capture left settings unchanged.
-- Actual backend TX journal:16 events, payload/submission/terminal lifecycle and boot cursor;53 hostcases/8022 assertions; IDF build 1,161,872 bytes/41%free; review clean. **Not deployed.** Current firmware lacks this command.
-- Passive feature feedback:5 IDs/11 fields;58 APEcases/8302 assertions;42 UItests; check 0 warnings/build passed; review no blockers. **Not deployed.**
+| Tool | Verification | Deployment |
+|---|---|---|
+| Host CLI | 42 targeted offline tests; reviewer ran 35; read-only live status/capture left settings unchanged. | Host tool checked live. |
+| Actual backend TX journal | 16-event payload/submission/completion journal with boot cursor; 53 host cases / 8022 assertions; firmware build 1,161,872 bytes, 41% free; review clean. | Not deployed; current firmware lacks its command. |
+| Passive feature feedback | 5 IDs / 11 fields; 58 APE cases / 8302 assertions; 42 UI tests; build/check passed with no warnings; review clean. | Not deployed. |
+
+Test totals describe separate snapshots and are not additive.
 
 ## Open work
 
-| Route | Status | Next evidence |
-|---|---|---|
-| Matching HW4 request receiver | Open | Current 0x3FD receiver/acceptance mapping. |
-| Positive acceptance oracle | Open | Independently mapped accepted/enabled state and correlation, separate from control activity. |
-| GUI child/writer recursion | Parked/documented | Matching image and remaining profile/reset/child-input leaves. |
-| Backend managed-feature policy | External boundary | Authoritative server decision logic; client parser/cache is insufficient. |
-| Hardware inference | Not implemented | Authoritative raw 5 enum/profile mapping; preserve manual selection. |
-| Consolidation | Verified and independently reviewed | 3 tests, strict parsing and source-pointer checks passed for 55 IDs, 37 definitions, 2700 signals and 18 missing IDs. |
-| Live feature sweep | Interrupted, recovered | Remaining cases not run; review partial evidence before any separately routed test. |
-| Driving visualization flicker | Unresolved | Actual backend TX cadence and matching receiver/display consumers under the relevant behavior. |
-| Deployment | Pending | Separately authorized deployment and device validation; no new diagnostic deployment claimed. |
+| Route | What is missing |
+|---|---|
+| HW4 request receiver | Matching `0x3FD` decoder and accepted-state mapping. |
+| Positive acceptance indicator | Independent accepted/enabled state correlated with the request, separate from activity. |
+| GUI writers and child checks | Remaining profile/reset/invalidation paths and matching input producers. |
+| Managed-feature policy | Server decision logic beyond the recovered client parser and cache. |
+| Hardware inference | Authoritative meaning of raw value 5; manual selection remains in use. |
+| Feature sweep | Cases and combinations not reached before the interrupted run. |
+| Driving visualization flicker | Submitted TX cadence and downstream rendering/receiver behavior. |
+| Diagnostic deployment | Device validation of the new journal and passive feedback implementation. |
 
-## Publication boundary
+Signal consolidation is complete and independently reviewed: 3 tests, strict parsing and source-pointer checks passed for 55 selected IDs, 37 definitions, 2700 signals and 18 missing definitions. [Profiles](signal-profiles.md).
 
-Publication integration is handled separately. The issue comment remains a private review draft and is excluded from this export. No raw-data upload is included.
-
-This staging tree contains no repository-specific private branding or connection configuration. Review it before publishing; the included privacy audit is a bounded automated scan plus curated-content review, not a claim about unexported private data. No Obsidian destination/tool was available during this documentation lane; persistence used local project research artifacts.
+The [route index](route-index.md) tracks all branches, including documented GUI work that is currently parked. The issue comment remains a private draft. No Obsidian tool or destination was available; research persistence used local project artifacts.

@@ -1,28 +1,31 @@
-# Signal candidates and profiles
+# Signal profiles and feedback candidates
 
-This export deliberately contains no bulk DBC/database copies. The following counts describe retained private source extraction, not independently verified current-HW4 semantic coverage.
+Source profiles stay separate because matching IDs do not guarantee matching payloads, networks or hardware.
 
 ## Consolidated selection
 
-The latest selection has 55 IDs:48 unique older registry IDs, six external modern candidates and 0x25D. It contains 37 modern message definitions/2700 signals;18 selected IDs lack definitions. The full canonical reference contains 676 messages/42132 signals and remains separately hash-pinned. An earlier 31-definition subset omitted the six external candidates; the consolidated selection corrects that omission. The older 54-ID inventory remains immutable.
+| Source set | Coverage |
+|---|---|
+| Selected modern reference | 55 IDs: 48 older-registry IDs, six additional candidates and `0x25D`; 37 definitions / 2700 signals; 18 IDs lack definitions. |
+| Full modern reference | 676 messages / 42132 signals, retained privately. |
+| Older APE | 52 registry entries / 48 unique IDs; 18 recovered layouts / 291 packing groups. |
+| Two CH source profiles | Identical 26 messages / 39 unique signals, represented as 78 profile rows. Hardware/firmware applicability remains unknown. |
 
-Older APE evidence is separate:52 registry entries/48 unique IDs;18 older layouts/291 packing groups. Those are potential registered emissions, not messages necessarily observed on the current car.
+The consolidated selection corrects an earlier 31-definition subset that omitted six external candidates; the older 54-ID inventory remains unchanged. Verification and independent review passed: 3 tests, strict parsing and source-pointer checks, with no blocking findings.
 
-Two recovered CH source profiles contain identical 26 messages/39 unique signals, represented as 78 profile rows. Hardware/firmware applicability is unknown; folder labels were not treated as authoritative product identity. Source networks are preserved. Numerical ID equality does not create an ETH-to-CH route, and not all CAN is CH.
+The older registry lists potential emissions, not necessarily observed messages. Source network labels remain attached: equal IDs do not establish an ETH-to-CH route, and not all CAN is CH. Bulk databases are not published here.
 
-I completed verification and independent review: 3 tests, strict parsing and source-pointer checks passed with no blocking findings. No claim is made that every Tesla CAN signal repository was imported.
+## Feedback shortlist
 
-## Small feedback shortlist
+Positions use `start bit | width`. These are modern reference candidates, not a validated HW4 decoder.
 
-Minimal numeric summaries below are research candidates, not a released decoder specification or acceptance oracle.
-
-| Feature | Modern candidate | Limitation |
+| Feature | Candidate fields | Interpretation |
 |---|---|---|
-| TLSSC/traffic control |0x25DDLC 6: feature 0\|2, state 2\|3, unavailable 38\|4 | Additional to prior 54/57 filters; actual-HW4 applicability unproved. |
-| FSD operation |0x399 state 0\|4;0x259 suspension 19\|2/health 49\|1;0x191 unavailable 2\|9 DLC 2 | General operational/diagnostic feedback, not request ACK. |
-| Summon |0x399available 51\|1;0x259 reason 14\|5 | Availability differs from configuration acceptance. |
-| Navigation |0x24A navigation 39;0x399 state | Navigation available is not equivalent to managed FSD maps support. |
-| Hands |0x399 state 42\|4 | Matching version/hardware remains unverified. |
-| Visualization/LaneGraph | No independent feedback established in the bounded search | Do not substitute request bits as ACKs. |
+| Traffic control | `0x25D`, DLC 6: feature `0\|2`, state `2\|3`, unavailable `38\|4` | Traffic-control state, distinct from general APP status. |
+| FSD operation | `0x399` state `0\|4`; `0x259` suspension `19\|2`, health `49\|1`; `0x191` unavailable `2\|9`, DLC 2 | Operational and diagnostic context. |
+| Summon | `0x399` available `51\|1`; `0x259` reason `14\|5` | Availability, not configuration acceptance. |
+| Navigation | `0x24A` navigation bit 39; `0x399` state | Navigation availability differs from managed FSD maps support. |
+| Hands | `0x399` state `42\|4` | Hands-on state candidate. |
+| Visualization/LaneGraph | No independent feedback established | Request bits cannot stand in for receiver feedback. |
 
-Old 0x247abort width 7 versus modern width 8 is a real version discrepancy. Older/current 0x399 states also differ; a modern enum name cannot be applied silently to an older publisher.
+The older `0x247` abort field is 7 bits wide; the modern field is 8. Older and modern `0x399` states also differ. Applying a modern enum to an older publisher would change the interpretation without evidence. [Producer and consumer trace](trace-details.md#older-ape-chain).

@@ -1,25 +1,27 @@
-# Methodology and evidence limits
-
-AI-assisted analysis and REA helped with the investigation. Independent branch/capture checks were used where retained evidence allowed; unresolved interpretations are labelled rather than presented as results.
+# Methods and source limits
 
 ## Static work
 
-The trace began at visible warning strings, followed their callers, then recursively followed the defining input variables. GUI saved-request writers were traced forward separately from eligibility decisions. Functions, DataValue registrations, response parsing, persistence and packet encoding were compared without assuming that identical names or IDs mean identical behavior across hardware.
+Analysis began at the warning strings, followed their callers and recursively traced defining variables. GUI request writers were followed forward separately from eligibility checks. Disassembly and REA-assisted analysis connected DataValue registration, feature-response parsing, persistence and packet encoding.
 
-The older APE chain used decoder/callback/shared-memory identity/consumer evidence. Emitter catalogue entries were recovered from constructors and dispatch, while message semantics were retained as unknown where only packing was established. Coverage counts describe the bounded inspected populations, not all firmware.
+For the older APE artifact, decoder, callback, shared-memory identity and consumer reads established the request chain. Emitter constructors and dispatch established registered messages; packing alone was not treated as a complete semantic decoder. Identical names or IDs were not assumed to imply equivalent behavior across hardware.
 
-The public export intentionally omits original binaries, bulk definitions, source/decompilation excerpts, raw captures, screenshots, identifying hashes and private evidence paths. It provides independent summaries and public upstream links. Reproduction against matching images requires private source provenance and permission; this export does not promise full standalone reproducibility.
+AI-assisted interpretations were checked against branches and captures where retained evidence allowed. Coverage counts describe the inspected populations. Some address reports lack retained raw exports.
 
 ## Live work
 
-I used a stationary freshness guard and bounded filtered captures, preserved original settings and separated intervention phases. Backend counters, delivered RX, operational candidates and receiver acceptance were treated separately. Engine off/on and isolated feature experiments were distinct populations, not merged as one capture.
+Stationary freshness checks and bounded filtered captures separated intervention phases. Original settings were preserved and restored. Board transport counters, delivered RX and operational fields were compared separately; engine and isolated-feature captures were not merged.
 
-The interrupted sweep had a known quality gap: it subscribed only to capture events, omitting DROP notifications. Heartbeat, bus, error and fault notifications are always delivered regardless of subscription. Flat physical bus counters cannot establish lossless filtered delivery. Stream loss correctly triggered the freshness abort; the later guarded reconnect/restore was verified. No moving-state cause or feature-induced failure was established.
+The interrupted sweep subscribed only to capture events, omitting DROP notifications. Heartbeat, bus, error and fault notifications were always delivered. Physical bus counters cannot establish lossless filtered delivery. Stream loss triggered the freshness abort; subsequent reconnect and restoration were verified.
 
-## Future improvement
+A future harness needs DROP events, connection-close metadata and bounded identity-checked reconnect/Stop/restore with fresh stationary checks. These improvements were not present in the interrupted harness.
 
-A future harness should retain all capture/drop/error/fault events, connection-close metadata and a bounded identity-checked reconnect/Stop/restore sequence with fresh stationary prerequisites. This is a proposed method improvement, not an implemented capability of the interrupted harness. The freshness guard should remain strict.
+## Interpreting feedback
 
-Request-correlated acknowledgement requires a proved receiver/status relationship. General availability, warnings, activity states and TX completion are insufficient individually. Matching current hardware remains the highest-value missing evidence.
+A request-correlated acceptance indicator requires a demonstrated receiver-to-status relationship. Availability, warnings, activity and transmission completion answer different questions. Matching HW4 receiver evidence remains missing; older APE behavior cannot fill that gap.
 
-Firmware and APE images acquired from Lunars. The contributor reports that these were the latest images available to them; no MCU3/HW4 images or newer HW3/HW2.5 APE images were available to them. This availability statement is contributor-reported, not an independent source audit. Modern ICE-based MCU analysis and the older HW2.5 APE artifact remain separate evidence profiles; neither establishes current HW3/HW4 equivalence.
+## Artifact availability
+
+Firmware and APE images acquired from Lunars. These were the latest images I could obtain. No MCU3/HW4 images or newer HW3/HW2.5 APE images were available to me. This describes the sources available for this investigation, not an audit of all available firmware.
+
+The MCU analysis uses an ICE-based artifact; the APE analysis uses an older HW2.5 artifact. Public notes exclude binaries, bulk definitions, decompilation exports, raw captures, screenshots, identifying hashes and private paths. They provide derived findings and upstream references, not a full reproduction package.

@@ -1,5 +1,7 @@
 # FSD region gates, CAN requests and vehicle feedback
 
+This research and its documentation were written entirely by an LLM, using firmware analysis, code inspection and recorded tests. Findings are linked to evidence; unresolved interpretations are marked.
+
 I started with two messages: FSD asked for updated navigation maps, while Traffic Light and Stop Sign Control (TLSSC) said the region was unsupported. I wanted to find what decides those messages, what pressing the switches sends, and whether a modified request produces an independent response from the vehicle.
 
 I used a custom C6 board with a CAN transceiver, disassembly and REA-assisted analysis. **I recovered useful source paths, but I have not proved that the HW4 test platform accepts the modified requests.**
@@ -18,24 +20,63 @@ I used a custom C6 board with a CAN transceiver, disassembly and REA-assisted an
 | 8. Check visualization and recovery | I observed parked visualization, then attempted a further feature sweep. | The request stayed stable in the parked window. A later connection loss stopped the sweep; guarded recovery restored the original settings. Driving flicker and remaining cases are unresolved. [Observations and recovery](docs/experiments.md#stationary-visualization) |
 | Separate tooling milestone | I prepared passive diagnostics and a journal of actual submitted transmissions. | Tests, builds and review passed. These changes are **not deployed**, so they provide no new on-vehicle acceptance result. [Implementation state](docs/evidence-and-open-work.md#implementation-state) |
 
-## How the pieces connect
+## What decides the warnings
+
+The starting clues were two stock settings: `vapi/forceHasFSDNavMaps` and `vapi/forceHasFSDStopsMaps`. Both exist, but their names were misleading leads: the inspected objects default to false, and the bounded search found no consuming reads. The actual map checks read managed feature variables instead.
+
+This chain lives in the inspected **QtCar UI application**, not in the custom CAN board. The predicates and `FeatureConfigManager` are in `usr/tesla/UI/lib/libQtCarGUI.so.1.0.0`; the primary feature variables are constructed in `usr/tesla/UI/bin/QtCar`. These are generic installed paths in the inspected ICE image, not a claim about matching HW4 code.
+
+| Screen check or input | Exact code / variable | What controls it |
+|---|---|---|
+| FSD maps check | `VehicleUtils::hasFSDNavMaps()` → `FEATURE_hasFullSelfDrivingNavMaps` | Managed key `fsd_navigation_supported`, subject to the registered hardware/default/factory update rules. |
+| TLSSC maps check | `VehicleUtils::hasFSDStopsMaps()` → `FEATURE_dasHasFSDStopsMaps` | Separate managed key `fsd_stops_maps`; this is not the FSD navigation flag. |
+| Managed feature values | `GUI_featureConfig` → `FeatureConfigManager::updateFeatureConfigs()` | `mothershipResponse()` parses a successful feature-configuration response. Persisted values can also be restored at startup. Missing/invalid target keys fall back to false; the backend decision algorithm is outside this client. |
+| FSD control capability | `VehicleUtils::hasFSDControl()`; `FEATURE_fullSelfDriving` | The managed `full_self_driving` key is one input alongside hardware, configured country and Autopilot capability. It does not replace the maps check. |
+| TLSSC regional eligibility | `VehicleUtils::isFSDStopsControlAllowed()` | Requires **both** `hasFSDStopsControl()` and `isStopsLocationApproved()`. Capability includes configured-country, hardware, package and legacy-DCAS checks; location is checked separately. |
+| Where the car is localized | `GUI_navVehicleCountry`, `GUI_isOnNavigationMap` | Navigation-derived country must be valid, on-map and in an approved group. This differs from gateway-configured `VAPI_countryCode`. |
+| Installed map-region check | `GUI_navigationMapWrongRegion` | `NavMapController::updateMapStatus()` checks the expected region's map directory after validity/mount guards. This flag is separate from the two managed maps-support flags. |
+
+The [per-button traces](docs/trace-details.md#fsd-maps-warning-and-selection) follow these inputs backward and each confirmed request forward.
+
+That is why downloading maps, changing a country value and forcing a CAN request are not interchangeable fixes. The main FSD entry also checks parked state and camera hardware. The TLSSC warning checks eligibility/region before maps, parked state and calibration. [Recovered branches and inputs](docs/trace-details.md#gui-warnings).
+
+There are genuine stock force consumers too: `vapi/forceHasFSDControl`, `vapi/forceDisableFSDControl` and `vapi/force_fsd_autopilot`. They are distinct from the board's ForceFSD option. In the inspected `libQtCarUtils.so.1.0.0` loader, their environment value selects current/default values rather than normal settings-file loading. Other loader environments can read settings, but the `/var/run/is-fused` marker blocks that path for the inspected environment values 1 and 4. Finding a key therefore does **not** establish a working file override. [Force/configuration boundary](docs/trace-details.md#value-producers).
+
+The matching HW4 implementation, actual runtime inputs and server-side feature policy remain unverified.
+
+## Follow either switch
+
+**FSD maps warning and selection** — the maps flag is only one gate. [Full eligibility and action trace](docs/trace-details.md#fsd-maps-warning-and-selection).
 
 ```mermaid
-flowchart TD
-  INPUT[Gateway configuration, managed features and navigation] --> CHECK[GUI eligibility checks]
-  CHECK --> TEXT[Warning text and switch availability]
-  TEXT --> CLICK[My switch selection and confirmation]
-  CLICK --> SAVED[Saved request]
-  SAVED --> ENCODE[Stock eligibility recheck and request encoding]
-  ENCODE --> GW[Gateway transport]
-  NATIVE[Received request frame] --> MOD[Custom board modifier]
-  MOD --> TX[Backend submission and completion]
-  GW -. matching HW4 receiver unresolved .-> APE[Vehicle processing]
-  TX -. completion is not acceptance .-> APE
-  APE -. request-correlated proof missing .-> STATUS[Independent feedback candidates]
+flowchart LR
+  SOURCE["Feature response / cache<br/>Gateway capability"] --> GATE{"Offer + maps +<br/>parked + cameras?"}
+  GATE -->|maps false after offer| WARNING["Updated maps warning"]
+  GATE -->|enabled| BUTTON["FSD selector entry"]
+  BUTTON -->|user confirms| SAVED["GUI_fsdControlEnabled"]
+  SAVED --> ENCODER{"Stock VAPI encoder<br/>rechecks eligibility"}
+  ENCODER --> REQUEST["0x3FD page0<br/>FSD control46 / available47"]
+  REQUEST -. "UNKNOWN matching HW4 consumer" .-> VEHICLE["Accepted / enabled / active?"]
+  classDef button fill:#174d6d,stroke:#56c7ff,stroke-width:3px,color:#ffffff
+  class BUTTON button
 ```
 
-The board adds modified frames; it does not replace or suppress the originals. A captured request may therefore remain unchanged even while the board reports transmissions. RX source attribution, actual submitted bytes and vehicle acceptance are separate questions.
+**TLSSC region warning and toggle** — configured capability and navigation localization are separate checks. [Full eligibility, clearing and action trace](docs/trace-details.md#tlssc-region-warning-and-toggle).
+
+```mermaid
+flowchart LR
+  INPUT["Gateway capability + nav location<br/>Managed stops-maps feature"] --> ALLOW{"Allowed AND maps AND<br/>parked AND calibrated?"}
+  ALLOW -->|allowed false| REGION["Unsupported-region warning"]
+  ALLOW -->|enabled| BUTTON["TLSSC toggle"]
+  BUTTON -->|user confirms| SAVE["GUI_fsdStopsControlEnable"]
+  SAVE --> EFFECTIVE{"Allowed AND saved request?"}
+  EFFECTIVE --> REQUEST["0x3FD page0 bit38<br/>Effective TLSSC request"]
+  REQUEST -. "UNKNOWN matching HW4 consumer" .-> FEEDBACK["Accepted / enabled / active?"]
+  classDef button fill:#174d6d,stroke:#56c7ff,stroke-width:3px,color:#ffffff
+  class BUTTON button
+```
+
+These summarize the ordinary UI paths; the detailed traces retain force/default/fuse branches, warning precedence and cruise behavior. Clicking or painting a selection is not engaging vehicle control. The board adds modified frames without replacing originals, so unchanged captured RX does not establish what it transmitted or whether the vehicle accepted it.
 
 ## Main messages I followed
 
@@ -78,3 +119,5 @@ My main open task is to connect a **matching HW4 request receiver to an independ
 - [Structured sanitized findings](findings.json)
 
 This repository contains independent research notes. It excludes identifying vehicle information, raw captures, firmware binaries, decompilation dumps and bulk signal databases. The issue comment remains a separate private draft. Source copyrights and licenses remain with their holders; a publication license for these notes has not been selected.
+
+<sub>Research purposes only. Do not act on these findings or use them to modify or operate a vehicle. The authors accept no responsibility for how this information is used. Do not use it for unlawful activities.</sub>
