@@ -1,0 +1,20 @@
+# Raw evidence and original/extracted material must never enter Git.
+private/
+**/private/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.bin
+*.elf
+*.img
+*.dbc
+*.compact.json
+*.compact.json.json
+*.pcap
+*.pcapng
+*.dump
+*.trace
+.DS_Store

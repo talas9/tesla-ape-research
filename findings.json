@@ -1,0 +1,66 @@
+{
+  "schema": "derived-research-notes-v1",
+  "identity_policy": "Hardware classes only; no identifying vehicle, user, location or exact-version metadata.",
+  "scope": {
+    "source_cid": "ICE-based artifact",
+    "source_ape": "HW2.5 artifact",
+    "live": "HW4 test platform",
+    "historical": "HW3 test platform"
+  },
+  "outcomes_separate": [
+    "request accepted",
+    "feature enabled",
+    "control active"
+  ],
+  "findings": [
+    {
+      "status": "recovered_bounded",
+      "finding": "GUI map warning and TLSSC region warning have different predicates."
+    },
+    {
+      "status": "recovered_bounded",
+      "finding": "Gateway configuration, managed features and localized country are distinct input paths."
+    },
+    {
+      "status": "recovered_bounded",
+      "finding": "Older request accepted state reaches ASM consumers; current HW4 equivalence unresolved."
+    },
+    {
+      "status": "observed",
+      "finding": "Measured stationary interventions did not establish request-correlated receiver-status changes."
+    },
+    {
+      "status": "observed",
+      "finding": "Parked visualization request remained stable; driving flicker remains unresolved."
+    },
+    {
+      "status": "verified_recovery",
+      "finding": "Interrupted test ended with original settings content restored and runtime restarted; remaining cases not run."
+    },
+    {
+      "status": "methodology_limit",
+      "finding": "Capture-only subscription omitted DROP notifications only; heartbeat, bus, error and fault notifications are always delivered. Flat bus counters do not prove filtered capture losslessness."
+    }
+  ],
+  "counts": {
+    "older_registry_entries": 52,
+    "older_unique_ids": 48,
+    "selected_modern_ids": 55,
+    "modern_definitions": 37,
+    "modern_signals": 2700,
+    "modern_missing_ids": 18,
+    "older_layouts": 18,
+    "older_field_groups": 291,
+    "CH_unique_messages": 26,
+    "CH_unique_signals": 39
+  },
+  "implementation": "Diagnostic journal and passive status changes built/reviewed, not deployed.",
+  "open": [
+    "matching HW4 receiver",
+    "independent acceptance oracle",
+    "hardware raw5 enum",
+    "driving visualization consumer",
+    "remaining combination tests"
+  ],
+  "consolidation_review": "Complete: 3 tests, strict parsing and source-pointer verification passed; 55 IDs, 37 definitions, 2700 signals, 18 missing IDs; no blocking findings."
+}

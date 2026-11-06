@@ -1,0 +1,29 @@
+{
+  "schema": "public-derived-document-manifest-v1",
+  "status": "frozen_for_independent_privacy_review",
+  "publication_scope": "Curated derived research documents only. No private source, raw data or draft comment.",
+  "files": [
+    "README.md",
+    "docs/corrections.md",
+    "docs/evidence-and-open-work.md",
+    "docs/experiments.md",
+    "docs/methodology.md",
+    "docs/research-paper.md",
+    "docs/route-index.md",
+    "docs/signal-profiles.md",
+    "docs/sources.md",
+    "docs/trace-details.md",
+    "findings.json",
+    "manifest.json",
+    "privacy-audit.md"
+  ],
+  "excluded": [
+    "Original Tesla artifacts and bulk definitions",
+    "Raw captures and screenshots",
+    "Exact identities, locations, versions and dates",
+    "Hashes, credentials and local connection paths",
+    "Private issue-comment draft"
+  ],
+  "external_citations": "Public upstream source/discussion URLs only, mutable main-branch references; inspected revision retained privately.",
+  "license": "Not selected; no upstream source implementation copied."
+}
