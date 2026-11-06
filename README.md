@@ -6,6 +6,8 @@ I started with two messages: FSD asked for updated navigation maps, while Traffi
 
 I used a custom C6 board with a CAN transceiver, disassembly and REA-assisted analysis. **I recovered useful source paths, but I have not proved that the HW4 test platform accepts the modified requests.**
 
+For a detailed, evidence-linked reference, see the [consolidated research knowledge base](LLM.md).
+
 ## What I tried and learned
 
 | Step | What I did | What I found |
