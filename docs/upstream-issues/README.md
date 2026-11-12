@@ -6,7 +6,19 @@ This index records reported outcomes, maintainer corrections and unresolved ques
 
 The source snapshot included 123 issues and 1,287 visible comment bodies. This index contains 122 briefs. One thread was omitted to protect privacy. Review covers the visible discussion for each indexed issue. Linked discussions and attachments have separate coverage.
 
-A November 12 REST and GraphQL recheck found four visible comments against five advertised on [#19](issue-19.md), and ten against fourteen on [#103](issue-103.md). GraphQL reported no next page in either case. The cause of the difference is unknown.
+The November 12 REST and GraphQL recheck found four visible comments against five advertised on [#19](issue-19.md), and ten against fourteen on [#103](issue-103.md). GraphQL reported no next page in either case. The cause of the difference is unknown.
+
+## Related discussions
+
+The November 12 inventory listed 124 visible issues and 1,305 advertised comments. There are 123 public briefs including [new thread #276](issue-276.md), plus one thread withheld for privacy. The targeted recheck updates selected briefs and counts in the original table.
+
+| Question | What the comments add |
+|---|---|
+| Does `APP_w462` identify a preflight check? | [#73](issue-73.md) reports the same alert after the FSD option appeared on a reported Intel 2026.14-series setup. The maintainer inferred rejection by a newer check. Tesla documents the alert as a generic engagement refusal. |
+| What supports a vehicle-side check? | [Discussion #163](https://github.com/hypery11/flipper-tesla-fsd/discussions/163#discussioncomment-18156673) gives the maintainer's interpretation of a comparative HW4 2026.14.6 capture. The reporter corrected a lane-change observation. A later question about whether anyone had located the receiver code remained unanswered. [Correction](https://github.com/hypery11/flipper-tesla-fsd/discussions/163#discussioncomment-18159098), [receiver question](https://github.com/hypery11/flipper-tesla-fsd/discussions/163#discussioncomment-19498958) |
+| Do the display and status tell us what engaged? | [#153](issue-153.md) reports visualization with engagement refusal on 2026.26.1 HW3 Model S Plaid. [#142](issue-142.md) reports restored status readout followed by continued refusal. [#129](issue-129.md) concerns a flickering availability icon and an RX-only timing gap. |
+| What can scanner logs miss? | [#100](issue-100.md) leaves frame absence and capture loss indistinguishable in an erroring capture. [#191](issue-191.md) and [#270](issue-270.md) document recorder memory and dashboard scheduling limits on other hardware. |
+| Do the tools install software or prove settings changed? | [#271](issue-271.md) separates Tesla OTA delivery from the project's scope. [#276](issue-276.md) separates observed DAS status from a vehicle setting change. |
 
 | Thread | Visible comments | Main finding |
 |---|---:|---|
@@ -67,7 +79,7 @@ A November 12 REST and GraphQL recheck found four visible comments against five 
 | [80](issue-80.md) | 21 | A genuine initial HW4 success report later became a failure report |
 | [95](issue-95.md) | 23 | A recovered stalk checksum did not establish a working shared-bus engagement path |
 | [96](issue-96.md) | 3 | Dual-bus architecture is distinct from feature acceptance |
-| [100](issue-100.md) | 60 | Nag suppression: partial successes, changing preflight theories and corrected bus attribution |
+| [100](issue-100.md) | 61 | Nag suppression: partial successes, changing preflight theories and corrected bus attribution |
 | [101](issue-101.md) | 5 | Two modifications were distinguished in source |
 | [103](issue-103.md) | 10 | Capture and status layout observations apply to the tested setup |
 | [104](issue-104.md) | 8 | A single-ID filter improved a trace; later exports added explicit loss metadata |
@@ -109,7 +121,7 @@ A November 12 REST and GraphQL recheck found four visible comments against five 
 | [180](issue-180.md) | 1 | An Autopark-specific transmission guard followed a contributor’s warning report |
 | [182](issue-182.md) | 1 | Preflight and remaining features are maintainer assertions |
 | [183](issue-183.md) | 3 | Automatic hardware and OTA detection both misclassified input |
-| [191](issue-191.md) | 17 | A reported nag reduction was followed by intermittent faults and an unresolved recording regression |
+| [191](issue-191.md) | 18 | A reported nag reduction was followed by intermittent faults and an unresolved recording regression |
 | [192](issue-192.md) | 3 | A compiled handler and an exposed toggle were different milestones |
 | [193](issue-193.md) | 6 | HW3 interaction report and a corrected diagnosis |
 | [206](issue-206.md) | 15 | An FD-board build existed, but its second controller remained unverified and failed probing |
@@ -129,8 +141,8 @@ A November 12 REST and GraphQL recheck found four visible comments against five 
 | [254](issue-254.md) | 2 | Command status was explicitly separated from heating |
 | [264](issue-264.md) | 1 | Follow-distance display is not the raw profile selector |
 | [265](issue-265.md) | 1 | An entitlement question remains unanswered |
-| [270](issue-270.md) | 1 | A vanished dashboard client is a reported scheduling failure |
-| [271](issue-271.md) | 2 | Activation flags do not install a new software image |
+| [270](issue-270.md) | 3 | Maintainer confirms a scheduling failure and reports a heartbeat fix |
+| [271](issue-271.md) | 3 | Activation flags do not install a new software image |
 | [272](issue-272.md) | 0 | A compatibility question is not a test |
 
 [Machine-readable claim ledger](claims.json). The three main references for this research are [#49 and its historical HW4 TLSSC report](issue-49.md), [#193 and the revised HW3 diagnosis](issue-193.md), and [#2 and the maintainer’s preflight explanation](issue-2.md).

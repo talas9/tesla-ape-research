@@ -150,6 +150,29 @@
       }
     ]
   },
+  "targeted_recheck": {
+    "date": "2026-11-12",
+    "scope": "Selected related threads and replies. The coverage block describes the original snapshot.",
+    "visible_comment_counts": {
+      "73": 14,
+      "100": 61,
+      "129": 9,
+      "142": 15,
+      "153": 5,
+      "191": 18,
+      "270": 3,
+      "271": 3,
+      "276": 2
+    },
+    "new_public_briefs": [276],
+    "related_discussions": [
+      {
+        "source": "https://github.com/hypery11/flipper-tesla-fsd/discussions/163#discussioncomment-18156673",
+        "visible_comments": 5,
+        "boundary": "The maintainer interprets a 2026.14.6 HW4 Juniper comparison. The reporter corrected a lane-change observation. No matching receiver code or current Model X cause is established."
+      }
+    ]
+  },
   "claims": [
     {
       "id": "I49-C1",
@@ -678,7 +701,7 @@
       "status": "complete_visible_thread_synthesis",
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/271",
       "brief": "issue-271.md",
-      "boundary": "This is participant explanation, not binary proof of the complete update pipeline. Nothing in the thread shows that CAN feature flags install or replace the underlying application."
+      "boundary": "The maintainer explicitly distinguishes the tool’s scope from Tesla OTA delivery. The thread does not establish server-side release selection in code."
     },
     {
       "issue": 192,
@@ -706,7 +729,7 @@
       "status": "complete_visible_thread_synthesis",
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/270",
       "brief": "issue-270.md",
-      "boundary": "This is a concrete scheduling hypothesis and proposed patch, not a confirmed upstream resolution or evidence that a separate implementation has the same architecture. Preserve request scheduling and vehicle rejection as different fault classes."
+      "boundary": "The maintainer reports a merged heartbeat and shorter send timeout on a different ESP32 implementation. The optional second-core split requires dual-core hardware. The reporter has not confirmed a post-fix result."
     },
     {
       "issue": 225,
@@ -1007,7 +1030,7 @@
       "status": "complete_visible_thread_synthesis",
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/73",
       "brief": "issue-73.md",
-      "boundary": "A warning setting, merged parser change or beta release is not an independently validated protection bypass. Hardware labels in settings and inferred labels in discussion are not measured hardware identity. Reports of one message appearing on one connection do not establish its universal bus location. Reduced nagging is described subjectively here; no precise causal measurement is supplied. The thread ends with an unresolved operational failure and a request for evidence."
+      "boundary": "A warning setting, merged parser change or beta release is not an independently validated protection bypass. Hardware labels in settings and inferred labels in discussion are not measured hardware identity. Reports of one message appearing on one connection do not establish its universal bus location. Reduced nagging is described subjectively here; no precise causal measurement is supplied. The thread ends with an unresolved operational failure and a request for evidence. The reported APP_w462 establishes an engagement refusal. The underlying cause remains unknown."
     },
     {
       "issue": 109,
@@ -1021,7 +1044,7 @@
       "status": "complete_visible_thread_synthesis",
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/191",
       "brief": "issue-191.md",
-      "boundary": "This supports reported partial HW3 nag functionality with significant unresolved reliability issues, not a clean universal success. The finite post-supply-change drive is an association rather than isolation of the cause. A controller send-failure count, a gap in a recorded counter and a vehicle safety fault are different observations. The latest recording regression prevents treating the requested follow-up record as obtained; no final causal diagnosis is supplied."
+      "boundary": "This supports reported partial HW3 nag functionality with significant unresolved reliability issues, not a clean universal success. The finite post-supply-change drive is an association rather than isolation of the cause. A controller send-failure count, a gap in a recorded counter and a vehicle safety fault are different observations. The latest recording regression prevents treating the requested follow-up record as obtained; no final causal diagnosis is supplied. The maintainer subsequently attributed the recorder problem to memory admission on a non-PSRAM setup and reported a shorter window. A reporter retest remains absent."
     },
     {
       "issue": 38,
@@ -1105,7 +1128,7 @@
       "status": "complete_visible_thread_synthesis",
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/100",
       "brief": "issue-100.md",
-      "boundary": "This thread supports setup-specific observed successes and failures, plus important reversals of bus identity, state layout, capture attribution and configuration advice. It does not recover a universal preflight algorithm or prove that every HW4 tap requires the same bus. Dashboard readiness, handler modifications, submitted traffic, nag suppression and maintained control are distinct outcomes. Error-limited or short captures cannot establish generation-wide ID absence; third-party device efficacy and causal mechanisms remain reported rather than independently verified."
+      "boundary": "This thread supports setup-specific observed successes and failures, plus important reversals of bus identity, state layout, capture attribution and configuration advice. It does not recover a universal preflight algorithm or prove that every HW4 tap requires the same bus. Dashboard readiness, handler modifications, submitted traffic, nag suppression and maintained control are distinct outcomes. Error-limited or short captures cannot establish generation-wide ID absence; third-party device efficacy and causal mechanisms remain reported rather than independently verified. A later Flipper/MCP2515 report leaves vehicle warnings and capture loss unattributed."
     },
     {
       "issue": 108,
@@ -1120,6 +1143,13 @@
       "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/18",
       "brief": "issue-18.md",
       "boundary": "The configuration rewrite is a valuable platform-specific positive lead. Available older APE decoders assign a different scalar meaning to the same numeric 0x331 ID on their routed input, so physical bus, source schema and consumer remain the missing link; the reported success must not be dismissed or generalized. A locally already-matching input yields no Restore transformation and is not the same intervention. Distinguish UI restoration, actual traffic-control behavior, full FSD activation and reversal of backend restrictions. No current HW4 receiver, universal preflight algorithm or reliable enforcement-prevention mechanism is established by this thread."
+    },
+    {
+      "issue": 276,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/276#issuecomment-6754837473",
+      "brief": "issue-276.md",
+      "boundary": "The maintainer identifies a status output and reports no confirmed writer in the upstream project. The thread supplies no functional result."
     }
   ]
 }

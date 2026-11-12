@@ -456,13 +456,15 @@ Priority next work is a matching modernHW4receiver/publisher and independent acc
 
 ### Upstream issue synthesis
 
-The [issue evidence index](docs/upstream-issues/README.md) covers 122 public briefs from a snapshot of 123 issues and 1,287 visible comment bodies. One thread was withheld for privacy. REST and GraphQL exposed four of five advertised bodies on #19 and ten of fourteen on #103. GraphQL reported no next page. This leaves five unexplained count discrepancies.
+The original [issue evidence snapshot](docs/upstream-issues/README.md) covered 122 public briefs from 123 issues and 1,287 visible comment bodies. One thread was withheld for privacy. REST and GraphQL exposed four of five advertised bodies on #19 and ten of fourteen on #103. GraphQL reported no next page. This leaves five unexplained count discrepancies.
 
 - **#18** contains 14 passive `0x259 APP_status` frames from a reported 2026.2.9.3 HW4 Model S Plaid. Candidate suspend raw 0 coexists with the reported restriction. The participant’s revoke-counter guesses differ from the reference DBC, as do maintainer claims placing the named hands-on and lane-change fields on `0x39B`. The thread supplies no matching current Model X receiver proof or request-specific acknowledgement. [Signal evidence and primary comments](docs/upstream-issues/issue-18.md#what-the-captures-support)
 - **#18 restriction reports** describe selective FSD and TLSSC loss for a paid HW3 subscriber. The reported gateway tier comparison used different cars, while a retained local sample already showed raw tier 3. An HW4 engagement refusal in one setup on 2026.8.6 predates the releases cited in the later preflight claim. A separate Model X 2026.14.3 report was withdrawn after reinstall. The mechanism and duration of the opening restriction notice remain unknown. [Report and correction timeline](docs/upstream-issues/issue-18.md#what-the-restriction-reports-establish)
 - **#49** cites an older refreshed-HW4 TLSSC report that describes actual slowing and stopping. The thread adds no successful result from the questioner. The separate HW3 report has a later software regression. [Brief](docs/upstream-issues/issue-49.md)
 - **#193** records a feature interaction on refreshed HW3. The maintainer withdrew the dual-bus explanation and corrected an earlier gear interpretation. The retrieved follow-up does not establish the cause. [Brief](docs/upstream-issues/issue-193.md)
 - **2026.14.x preflight** is a maintainer attribution. The reviewed evidence does not identify that gate in matching firmware or tie it to the current `APP_w462` warning. [Brief](docs/upstream-issues/issue-2.md)
+
+The [November 12 related discussion recheck](docs/upstream-issues/README.md#related-discussions) adds a prior `APP_w462` symptom on another setup, a 2026.14.6 HW4 Juniper comparison with a corrected observation and no identified receiver code, and a paid HW3 case where visualization coexisted with engagement refusal. It also records how RX-only capture, capture loss, recorder memory and dashboard scheduling limited the conclusions. None of the comments establishes the cause of the current Model X refusal.
 
 ### November 12 diagnostics and source limits
 
