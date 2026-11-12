@@ -4,6 +4,14 @@
 
 The linked refreshed-HW4 report describes a returned TLSSC toggle and observed slowing or stopping for red lights. Full city FSD and applicability to current software were outside that result. [Historical report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4274204433).
 
+## What the restriction reports establish
+
+The opening post shares an example notification as an attachment and reports similar notices from other drivers. The issue does not establish the restriction mechanism or duration. A paid HW3 subscriber separately reports losing FSD and the TLSSC toggle while Enhanced Autopilot remained available. Reinstalling software and transferring vehicle ownership between accounts did not resolve that participant’s symptoms. [Opening report](https://github.com/hypery11/flipper-tesla-fsd/issues/18), [subscriber report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4237070655), [service follow-up](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4236658638)
+
+The maintainer revised an earlier interpretation of the `0x7FF` gateway tier after comparing tier 2 on a restricted vehicle with tier 3 on a different vehicle. That comparison has no same-vehicle before-and-after baseline. A later capture also ruled out a separate proposed flag as universal across hardware. A retained local sample already showed raw tier 3, so the reported tier-2 comparison does not explain the local symptoms by itself. [Tier correction](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4262151563), [later capture](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4268663312)
+
+One HW4 participant reported refusal at engagement in one setup on 2026.8.6, an earlier release than the 2026.14.x and 2026.20 builds in the maintainer’s later preflight claim. That earlier symptom does not identify the implementation. A separate Model X report on 2026.14.3 was withdrawn after a Service Mode reinstall cleared the anomaly. The thread supplies no matching firmware proof of preflight. [HW4 refusal report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4288542529), [maintainer attribution](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4744265701), [Model X follow-up](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4380734483)
+
 ## What the captures support
 
 | Observation | Evidence and limits |
