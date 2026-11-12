@@ -4,4 +4,15 @@
 
 The linked refreshed-HW4 report describes a returned TLSSC toggle and observed slowing or stopping for red lights. Full city FSD and applicability to current software were outside that result. [Historical report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4274204433).
 
+## What the captures support
+
+| Observation | Evidence and limits |
+|---|---|
+| `0x259 APP_status` | A refreshed HW4 Model S Plaid participant on 2026.2.9.3 posted 14 frames across two captures, with roughly 100 ms between consecutive frames. The reference decode gives candidate `APP_fsdSuspendState = 0` despite the reported restriction. A separate participant reported raw 1 without comparable hardware and software details. Neither capture identifies a universal restriction flag or establishes the sender from receive data alone. [Capture](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4291745909), [reported build](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4274204433), [separate report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4285766494) |
+| Revoke counters | The capture post speculates about the positions of the revoke counters. Those guesses conflict with the inspected 2026.26.6.5 reference layout, which defines `APP_fsdRevokeCount`, `APP_fsdRevokeStrikeoutCount` and the frame counter as distinct fields. The reference is from another platform and release. [Capture discussion](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4291745909), [profile notes](../signal-profiles.md) |
+| Hands-on and lane-change status | Two maintainer replies place `DAS_autopilotHandsOnState` and `DAS_laneChangeState` on `0x39B`. The inspected 2025.20.8 and 2026.26.6.5 reference layouts put the named fields on `0x399 DAS_status` and `0x247 DAS_autopilotDebug` respectively. This is a layout discrepancy. A matching Plaid decode still requires matching evidence. [Hands-on reply](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4231481788), [lane-change reply](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4280242620), [profile notes](../signal-profiles.md) |
+| Warning codes | A separate Intel/HW3 report describes dashboard `APP_w207` and a Service Mode `APP_w045` entry. Their causal relationship was not established. [HW3 report](https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4262185906) |
+
+The `0x3FD` fields discussed are UI requests and the `0x7FF` tier is configuration. The issue's `0x331` label differs from `EPAS3P_info` in the inspected reference catalogue, so the numeric ID alone cannot settle its meaning. The thread contains no independently verified request acknowledgement or matching firmware consumer. Its visible comments also provide no diagnostic evidence for `0x25D`, `0x47D`, `APP_w462` or `APP_w478` on the current Model X.
+
 Review covered the issue and 169 visible comments. [Upstream discussion](https://github.com/hypery11/flipper-tesla-fsd/issues/18).
