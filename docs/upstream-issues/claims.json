@@ -1,0 +1,1125 @@
+{
+  "schema_version": 1,
+  "coverage": {
+    "complete_corpus_collected": false,
+    "public_briefs_complete": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25,
+      29,
+      30,
+      33,
+      34,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      45,
+      48,
+      49,
+      52,
+      53,
+      54,
+      55,
+      56,
+      58,
+      59,
+      60,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      72,
+      73,
+      75,
+      77,
+      79,
+      80,
+      95,
+      96,
+      100,
+      101,
+      103,
+      104,
+      106,
+      108,
+      109,
+      110,
+      111,
+      112,
+      115,
+      116,
+      117,
+      119,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      132,
+      135,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      153,
+      154,
+      158,
+      160,
+      161,
+      164,
+      173,
+      177,
+      180,
+      182,
+      183,
+      191,
+      192,
+      193,
+      206,
+      209,
+      211,
+      218,
+      219,
+      223,
+      224,
+      225,
+      229,
+      237,
+      250,
+      251,
+      252,
+      253,
+      254,
+      264,
+      265,
+      270,
+      271,
+      272
+    ],
+    "rule": "Complete issue and all retrieved comments read before brief; linked-thread coverage separate.",
+    "visible_corpus_collected": true,
+    "visible_issue_count": 123,
+    "visible_comment_count": 1287,
+    "advertised_but_unavailable_comment_count": 5,
+    "public_brief_count": 122,
+    "remaining_issue_count": 0,
+    "privacy_withheld_issue_count": 1,
+    "independent_review": "passed_factual_privacy_and_link_review",
+    "api_comment_count_discrepancies": [
+      {
+        "issue": 19,
+        "advertised": 5,
+        "visible": 4,
+        "graphql_has_next_page": false
+      },
+      {
+        "issue": 103,
+        "advertised": 14,
+        "visible": 10,
+        "graphql_has_next_page": false
+      }
+    ]
+  },
+  "claims": [
+    {
+      "id": "I49-C1",
+      "issue": 49,
+      "claim": "Relevant refreshed HW4 TLSSC stopping success exists in a linked report.",
+      "status": "reported_functional_result",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/18#issuecomment-4274204433",
+      "boundary": "Not full city FSD; current software and map parity unestablished."
+    },
+    {
+      "id": "I49-C2",
+      "issue": 49,
+      "claim": "Maintainer predicts broader refreshed HW4 compatibility.",
+      "status": "maintainer_prediction",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/49#issuecomment-4349728688",
+      "boundary": "No successful test by questioner in this thread."
+    },
+    {
+      "id": "I49-C3",
+      "issue": 49,
+      "claim": "Linked HW3 success has a later same-tester regression.",
+      "status": "reported_correction_context",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/17#issuecomment-4313436506",
+      "boundary": "Do not generalize across software releases."
+    },
+    {
+      "id": "I193-C1",
+      "issue": 193,
+      "claim": "The maintainer withdrew the initial dual-bus explanation.",
+      "status": "explicit_maintainer_retraction",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/193#issuecomment-6042606985",
+      "boundary": "The replacement hypothesis lacks a controlled follow-up result."
+    },
+    {
+      "id": "I3-S1",
+      "issue": 3,
+      "claim": "Entitlement claims change within the thread",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/3",
+      "brief": "issue-3.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I4-S1",
+      "issue": 4,
+      "claim": "Broad regional compatibility claim without a result",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/4",
+      "brief": "issue-4.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I5-S1",
+      "issue": 5,
+      "claim": "Termination advice needs board evidence",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/5",
+      "brief": "issue-5.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I7-S1",
+      "issue": 7,
+      "claim": "HW3 predictions versus missing activation results",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/7",
+      "brief": "issue-7.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I8-S1",
+      "issue": 8,
+      "claim": "Where the claimed confirmations came from",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/8",
+      "brief": "issue-8.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I9-S1",
+      "issue": 9,
+      "claim": "Branch and hardware assumptions remain disputed",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/9",
+      "brief": "issue-9.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I10-S1",
+      "issue": 10,
+      "claim": "HW2.5 support prediction later withdrawn",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/10",
+      "brief": "issue-10.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I12-S1",
+      "issue": 12,
+      "claim": "Modified frames do not establish activation or its cause",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/12",
+      "brief": "issue-12.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I13-S1",
+      "issue": 13,
+      "claim": "A structured HW3 success report is still self-reported",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/13",
+      "brief": "issue-13.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I15-S1",
+      "issue": 15,
+      "claim": "An allegation is not a technical refutation",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/15",
+      "brief": "issue-15.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I22-S1",
+      "issue": 22,
+      "claim": "Maintainer identifies inferred parsing and gateway gaps",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/22",
+      "brief": "issue-22.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I24-S1",
+      "issue": 24,
+      "claim": "High-beam override remains an experiment proposal",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/24",
+      "brief": "issue-24.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I25-S1",
+      "issue": 25,
+      "claim": "A lost toggle report conflicts with the closure description",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/25",
+      "brief": "issue-25.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I30-S1",
+      "issue": 30,
+      "claim": "Startup crash discussion moved to another issue",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/30",
+      "brief": "issue-30.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I34-S1",
+      "issue": 34,
+      "claim": "Availability and entitlement explanations remain assertions",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/34",
+      "brief": "issue-34.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I41-S1",
+      "issue": 41,
+      "claim": "Speed-profile packing corrected to preserve validity",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/41",
+      "brief": "issue-41.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I42-S1",
+      "issue": 42,
+      "claim": "A populated success report has a mismatched closure",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/42",
+      "brief": "issue-42.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I44-S1",
+      "issue": 44,
+      "claim": "Bus visibility and error counts remain unresolved",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/44",
+      "brief": "issue-44.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I45-S1",
+      "issue": 45,
+      "claim": "Reported operation despite a wrong hardware label",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/45",
+      "brief": "issue-45.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I48-S1",
+      "issue": 48,
+      "claim": "Unknown hardware and connection diagnoses are hypotheses",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/48",
+      "brief": "issue-48.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I53-S1",
+      "issue": 53,
+      "claim": "Displayed release identity can differ from installed code",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/53",
+      "brief": "issue-53.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I54-S1",
+      "issue": 54,
+      "claim": "Experimental toggles were explicitly untested",
+      "status": "complete_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/54",
+      "brief": "issue-54.md",
+      "boundary": "Applies to the visible discussion and its evidence."
+    },
+    {
+      "id": "I19-S1",
+      "issue": 19,
+      "claim": "OTA false-positive diagnosis and claimed fix",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/19",
+      "brief": "issue-19.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I55-S1",
+      "issue": 55,
+      "claim": "Activation failure and errors versus a blank-template closure",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/55",
+      "brief": "issue-55.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I56-S1",
+      "issue": 56,
+      "claim": "About scrolling is not resolved by a version-label fix",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/56",
+      "brief": "issue-56.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I58-S1",
+      "issue": 58,
+      "claim": "Legacy-mode success report does not equate MCU and AP hardware",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/58",
+      "brief": "issue-58.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I59-S1",
+      "issue": 59,
+      "claim": "A reported packing A/B exposes a validity-bit bug",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/59",
+      "brief": "issue-59.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I63-S1",
+      "issue": 63,
+      "claim": "Pedal response is explicitly separated from power unlock",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/63",
+      "brief": "issue-63.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I65-S1",
+      "issue": 65,
+      "claim": "No substantive report",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/65",
+      "brief": "issue-65.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I68-S1",
+      "issue": 68,
+      "claim": "Strategic TX-sunset proposal is not a universal receiver proof",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/68",
+      "brief": "issue-68.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I69-S1",
+      "issue": 69,
+      "claim": "Persistent manual hardware override requested",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/69",
+      "brief": "issue-69.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I72-S1",
+      "issue": 72,
+      "claim": "Translations acknowledged to contain obsolete claims",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/72",
+      "brief": "issue-72.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I75-S1",
+      "issue": 75,
+      "claim": "Board-family support needs a matching target",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/75",
+      "brief": "issue-75.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I77-S1",
+      "issue": 77,
+      "claim": "A filed-on-behalf success needs its source context",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/77",
+      "brief": "issue-77.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I96-S1",
+      "issue": 96,
+      "claim": "Dual-bus architecture is distinct from feature acceptance",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/96",
+      "brief": "issue-96.md",
+      "boundary": "Reported results, implementation claims and missing outcomes remain distinguished."
+    },
+    {
+      "id": "I116-S1",
+      "issue": 116,
+      "claim": "A reported status-layout variant affects tool gating",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/116",
+      "brief": "issue-116.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I123-S1",
+      "issue": 123,
+      "claim": "Shared event detector implementation reported",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/123",
+      "brief": "issue-123.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I124-S1",
+      "issue": 124,
+      "claim": "Recorder specification changed at implementation",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/124",
+      "brief": "issue-124.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I125-S1",
+      "issue": 125,
+      "claim": "Tap diagnostics distinguish presence from bus naming",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/125",
+      "brief": "issue-125.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I126-S1",
+      "issue": 126,
+      "claim": "Profile suggestions explicitly require confirmation",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/126",
+      "brief": "issue-126.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I127-S1",
+      "issue": 127,
+      "claim": "Field-readiness umbrella records scope, not a new test",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/127",
+      "brief": "issue-127.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I128-S1",
+      "issue": 128,
+      "claim": "Body-message visibility does not prove actuation",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/128",
+      "brief": "issue-128.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I132-S1",
+      "issue": 132,
+      "claim": "No-activation report awaits tap evidence",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/132",
+      "brief": "issue-132.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I135-S1",
+      "issue": 135,
+      "claim": "No confirmed Nag-only restriction is not a safety guarantee",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/135",
+      "brief": "issue-135.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I140-S1",
+      "issue": 140,
+      "claim": "A capture offer becomes an attributed passive result",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/140",
+      "brief": "issue-140.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I141-S1",
+      "issue": 141,
+      "claim": "Tool compatibility and network update access are separate",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/141",
+      "brief": "issue-141.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I154-S1",
+      "issue": 154,
+      "claim": "Third-bus receive load can disturb shared processing",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/154",
+      "brief": "issue-154.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I158-S1",
+      "issue": 158,
+      "claim": "ESP32 and Flipper feature parity was incomplete",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/158",
+      "brief": "issue-158.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "id": "I161-S1",
+      "issue": 161,
+      "claim": "Regional Summon unlock is not missing-feature installation",
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/161",
+      "brief": "issue-161.md",
+      "boundary": "Source-specific results and implementation claims are not universal compatibility or acceptance proof."
+    },
+    {
+      "issue": 272,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/272",
+      "brief": "issue-272.md",
+      "boundary": "No implementation or outcome is confirmed; compare a matching source profile and actual request/feedback evidence before applying another thread’s conclusion."
+    },
+    {
+      "issue": 265,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/265",
+      "brief": "issue-265.md",
+      "boundary": "Entitlement and compatibility remain unestablished in this thread; do not import a positive or negative result from the question."
+    },
+    {
+      "issue": 252,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/252",
+      "brief": "issue-252.md",
+      "boundary": "Preserve cumulative internal evidence separately from presentation resets; the thread does not validate vehicle behavior."
+    },
+    {
+      "issue": 229,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/229",
+      "brief": "issue-229.md",
+      "boundary": "These are maintainer claims with an admitted build-specific evidence gap. Existing binary research has not recovered the matching modern preflight algorithm; broad support must not become an exact-build tested badge."
+    },
+    {
+      "issue": 251,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/251",
+      "brief": "issue-251.md",
+      "boundary": "Two differently sourced SOC values need separate provenance; this thread does not establish cross-hardware scaling or validate the linked thread’s outcome."
+    },
+    {
+      "issue": 253,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/253",
+      "brief": "issue-253.md",
+      "boundary": "Per-bus presentation is supported by this report; controller visibility does not establish physical bus naming or authoritative consumer reachability."
+    },
+    {
+      "issue": 182,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/182",
+      "brief": "issue-182.md",
+      "boundary": "Keep this source as a scoped upstream explanation, not a recovered algorithm or proof of all remaining features. The linked FAQ and preflight discussion require their own evidence review."
+    },
+    {
+      "issue": 271,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/271",
+      "brief": "issue-271.md",
+      "boundary": "This is participant explanation, not binary proof of the complete update pipeline. Nothing in the thread shows that CAN feature flags install or replace the underlying application."
+    },
+    {
+      "issue": 192,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/192",
+      "brief": "issue-192.md",
+      "boundary": "UI exposure and real preheat effect remain distinct. A stated `0x082` handler is not a matched receiver trace or demonstrated preconditioning outcome."
+    },
+    {
+      "issue": 224,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/224",
+      "brief": "issue-224.md",
+      "boundary": "The resolution is a maintainer report, not an independent release reproducibility audit here. Distinguish the fork’s state from upstream’s state before importing dependency claims."
+    },
+    {
+      "issue": 138,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/138",
+      "brief": "issue-138.md",
+      "boundary": "Do not label re-engagement as automatic lane-change capability or entitlement recovery. The exact gate and outcomes need matching source and runtime verification."
+    },
+    {
+      "issue": 270,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/270",
+      "brief": "issue-270.md",
+      "boundary": "This is a concrete scheduling hypothesis and proposed patch, not a confirmed upstream resolution or evidence that a separate implementation has the same architecture. Preserve request scheduling and vehicle rejection as different fault classes."
+    },
+    {
+      "issue": 225,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/225",
+      "brief": "issue-225.md",
+      "boundary": "These are specific tooling confirmations; the thread does not validate any driving feature. Preserve the distinction between attempted save, readback and independently observed reconnect behavior."
+    },
+    {
+      "issue": 183,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/183",
+      "brief": "issue-183.md",
+      "boundary": "Message presence is not a universal hardware identifier. Keep detected, configured and effective hardware separate; a source-specific counter must not become a general OTA signal. The maintainer’s diagnosis is not an independently recovered receiver algorithm here."
+    },
+    {
+      "issue": 119,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/119",
+      "brief": "issue-119.md",
+      "boundary": "Purchase confirmation is direct reporter evidence; the complete on-car/backend cause remains a maintainer interpretation. A tier unchanged by injection does not by itself recover the policy algorithm or show which authority rejected it."
+    },
+    {
+      "issue": 264,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/264",
+      "brief": "issue-264.md",
+      "boundary": "A concrete source mapping is described, but the UI-to-raw map and actual vehicle behavior remain open. The thread does not validate a modern three-bit profile field on every HW3 path."
+    },
+    {
+      "issue": 160,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/160",
+      "brief": "issue-160.md",
+      "boundary": "Merged source support is not demonstrated trigger coverage. The brake-based report and stalk-based final implementation are different interventions; neither establishes a universal gear signal. Later issue193 retains a relevant absent-stalk failure."
+    },
+    {
+      "issue": 223,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/223",
+      "brief": "issue-223.md",
+      "boundary": "Dashboard success is not proof that every CAN channel works. The final reply predicts the old image’s second channel cannot address the FD controller; matching build identity and controller detection remain essential."
+    },
+    {
+      "issue": 111,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/111",
+      "brief": "issue-111.md",
+      "boundary": "Keep the contributor’s positive report separate from the maintainer’s changing interpretation. No merged implementation test or matched authentication/receiver trace is established here. Continue-on-green is not full-FSD activation."
+    },
+    {
+      "issue": 164,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/164",
+      "brief": "issue-164.md",
+      "boundary": "`0x39B` presence alone cannot identify HW4 or justify a status-field substitution on another bus. The attachment was not independently parsed for this brief; absence and timing claims are attributed to the maintainer, not promoted as new capture analysis."
+    },
+    {
+      "issue": 101,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/101",
+      "brief": "issue-101.md",
+      "boundary": "This is historical source-behavior explanation, not a guarantee that today’s feature gates or every platform match. In particular, later issue193 reports an interaction and retracts a dual-bus hypothesis; bit19 is not interchangeable with Restore or TLSSC bit38."
+    },
+    {
+      "issue": 219,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/219",
+      "brief": "issue-219.md",
+      "boundary": "Follow the correction rather than treating every disconnect as a network failure. The final report supports that tooling resolution on the tested board; it does not establish the same stack architecture or root cause in this research’s separate scanner."
+    },
+    {
+      "issue": 143,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/143",
+      "brief": "issue-143.md",
+      "boundary": "Record Nag as a participant-reported positive, FSD as not tested. Do not infer private-email entitlement methods or conclude hardware from the template’s Auto result. Source-profile and actual hardware identity remain distinct."
+    },
+    {
+      "issue": 209,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/209",
+      "brief": "issue-209.md",
+      "boundary": "This is a specific confirmed behavior correction, not proof that the same units/layout apply to HW4. A pass-through default and an opt-in computed profile are separate feature states."
+    },
+    {
+      "issue": 254,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/254",
+      "brief": "issue-254.md",
+      "boundary": "A command indicator must not say the battery is heating without independent state. UI organization does not close decode validity or current vehicle effect."
+    },
+    {
+      "issue": 237,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/237",
+      "brief": "issue-237.md",
+      "boundary": "This is stronger than plausible parked values: unequal reference values constrain ordering. Keep the seven-byte source separate from other `0x219` profiles; no universal wheel layout follows."
+    },
+    {
+      "issue": 250,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/250",
+      "brief": "issue-250.md",
+      "boundary": "No supported port or successful board test exists in this thread. Similar API names do not prove complete source identity, portability or a working driver stack."
+    },
+    {
+      "issue": 79,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/79",
+      "brief": "issue-79.md",
+      "boundary": "Classify the thread as an unanswered-by-test question, neither positive nor negative compatibility. The offline/server and telemetry assertions are maintainer explanations, not a recovered authority pipeline or a measured ban-risk result."
+    },
+    {
+      "issue": 21,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/21",
+      "brief": "issue-21.md",
+      "boundary": "Do not carry a withdrawn bus label into consumer tracing. Even seeing selected IDs does not prove the physical origin, authoritative receiver or all feature effects. The linked official connector references were not independently re-fetched for this brief."
+    },
+    {
+      "issue": 173,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/173",
+      "brief": "issue-173.md",
+      "boundary": "Contributor branch behavior, intended upstream guard and independently demonstrated resolution are different milestones. No merged temporary-recovery outcome is confirmed in this thread. Retain the AP-interaction report without assuming its complete cause."
+    },
+    {
+      "issue": 139,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/139",
+      "brief": "issue-139.md",
+      "boundary": "The corrected source mechanism supersedes the categorical earlier claim. The competing Bluetooth/radius assertions and later bus explanation do not establish universal runtime behavior or a verified safety/ban profile. Hardware, firmware, tap and actual feature state must remain attached to each report."
+    },
+    {
+      "issue": 64,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/64",
+      "brief": "issue-64.md",
+      "boundary": "No exact-build HW4 success follows. Do not transform purchase, planned tests or a parser fix into feature validation. The thread’s rollback/purchase advice is not an independently verified recovery method in this research."
+    },
+    {
+      "issue": 33,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/33",
+      "brief": "issue-33.md",
+      "boundary": "The crash correction and the remaining reception problem are different findings. Neither a running application nor a clock/tap theory proves feature acceptance. The withdrawn older-build success and fork-only diagnosis must not be retained as confirmed explanations."
+    },
+    {
+      "issue": 106,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/106",
+      "brief": "issue-106.md",
+      "boundary": "Use the actual target configuration, not the contradictory explanatory pin pair, as the reproducible lead. Flashing or a ready display alone is not proof of reception or feature behavior. The further claim that replay cannot persistently change gateway configuration is an attributed upstream explanation, not a recovered authority-chain proof."
+    },
+    {
+      "issue": 218,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/218",
+      "brief": "issue-218.md",
+      "boundary": "The board report supports some diagnostics functionality, not every flush-latency or scheduling claim. The source-bus fix concerns the identified Continuous AP path and must not be generalized into proof that every rewrite is routed correctly. Bus heuristics remain evidence with uncertainty, not physical-network identification."
+    },
+    {
+      "issue": 177,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/177",
+      "brief": "issue-177.md",
+      "boundary": "The manual-map report is a profile-specific positive result. No post-release confirmation appears in this thread. The maintainer’s universal explanation of byte1 is broader than this report proves; status-byte layout, state6 meaning and hardware generation cannot be equated across all firmware profiles."
+    },
+    {
+      "issue": 180,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/180",
+      "brief": "issue-180.md",
+      "boundary": "The contributor’s before/after observation is evidence for that setup; the follow-up implementation is an upstream source claim, not a confirmed vehicle retest in this thread. A numeric state6 alone is not a universal Autopark label. Do not apply the report as the explanation of a different vehicle or firmware without matching profile and episode context."
+    },
+    {
+      "issue": 39,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/39",
+      "brief": "issue-39.md",
+      "boundary": "The initial positive report is limited to its tap and implementation. The universal claim that any transmitted frame causes immediate disablement is not independently established by this thread; the linked source and its corrections need separate review. Connector labels and anti-spoofing explanations are attributed claims, not recovered receiver-path proof."
+    },
+    {
+      "issue": 129,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/129",
+      "brief": "issue-129.md",
+      "boundary": "The evolution is not a final confirmed cure. Availability, engagement transition, abort timing and injection cadence require separate evidence. The maintainer’s car-side-abort attribution is a hypothesis awaiting the promised TX-correlated record. This supports retaining submitted/completed payload provenance rather than interpreting RX copies as proof of injection."
+    },
+    {
+      "issue": 60,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/60",
+      "brief": "issue-60.md",
+      "boundary": "Replay behavior is not prevention, recovery or an established risk guarantee. The maintainer’s version-wide tampering and telemetry statements remain attributed explanations, not binary-verified policy or a proven ban probability. Participants’ anecdotal absence of a ban also does not establish protection."
+    },
+    {
+      "issue": 153,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/153",
+      "brief": "issue-153.md",
+      "boundary": "The reported engagement difference is useful; it does not recover the checker, its authority or a server-side identity flag. No completed unplugged visualization comparison or requested paired capture appears in the thread. Periodic `0x318`/`0x7FF` presence is not proof of an update being active, a ban or its cause. Listen-only build review is separate from feature validation."
+    },
+    {
+      "issue": 112,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/112",
+      "brief": "issue-112.md",
+      "boundary": "This is a positive report of some driving behavior alongside an unusable warning/braking condition, not proof of clean activation or an immediate complete disengagement. The later preflight, board-timing and wiring explanations remain hypotheses unless independently traced. No requested continued driving test should be inferred, and the observation does not establish matching current-HW4 behavior."
+    },
+    {
+      "issue": 142,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/142",
+      "brief": "issue-142.md",
+      "boundary": "Reported status tracking and Summon behavior must not be promoted into Restore or FSD success. The same-bus `0x331`/`0x3FD` assertion is a useful source claim to test against actual decoder routing, not recovered physical-network identity. Initial and later explanations differ about which status ID is present; do not infer hardware solely from a message number or a ready badge."
+    },
+    {
+      "issue": 115,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/115",
+      "brief": "issue-115.md",
+      "boundary": "Keep initial no-data failure separate from later reception. The source record does not independently prove why the first files were empty or recover a backend checker. Another participant’s different-profile tier test cannot alone establish this reporter’s complete authority chain. No clean activation result or final controlled A/B is supplied."
+    },
+    {
+      "issue": 66,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/66",
+      "brief": "issue-66.md",
+      "boundary": "The tested null effects do not prove that the field is display-only or that neural-network weights universally determine road side. The proposed enum meanings and separate-model theory are not established by the thread. Correct field location, actual consumer and observable behavior are separate proofs; the later implemented toggle is not a successful vehicle test."
+    },
+    {
+      "issue": 121,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/121",
+      "brief": "issue-121.md",
+      "boundary": "A filtered capture cannot establish absence of excluded IDs. The last sequence does not establish injection as its controlled variable, so its ordinary warning escalation cannot independently confirm preflight rejection. The actual Nag failure remains a reported result; physical bus identity, exact injection content and fault causality require separate evidence. Participant hardware and harness observations must not be generalized to every profile."
+    },
+    {
+      "issue": 80,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/80",
+      "brief": "issue-80.md",
+      "boundary": "Preserve both the real initial positive and the later reported loss of functionality. The original success does not establish current compatibility or protection from later failure. A disappearing toggle, a ban interpretation, subscription expiry and a recovered backend cause are different facts. Reboots, offline use and broad telemetry-risk explanations have no controlled causal validation here."
+    },
+    {
+      "issue": 103,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/103",
+      "brief": "issue-103.md",
+      "boundary": "A full-rate result for a particular path and selected high-rate signal does not establish losslessness of every path. Hardware generation does not universally identify the status ID. Release announcements and passive reference logs are not vehicle activation tests. Coverage includes all10 visible comments; the APIs advertise14, but four bodies are unavailable through both REST and GraphQL, as recorded in the corpus coverage gap."
+    },
+    {
+      "issue": 67,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/67",
+      "brief": "issue-67.md",
+      "boundary": "The final rename does not supply the missing efficacy evidence or fulfill the earlier remove-unless-demonstrated decision. NVRAM authority and telemetry persistence explanations remain attributed unless separately recovered. Replay, Restore and bit38 are distinct mechanisms; neither another feature’s success nor an unbanned low-exposure case demonstrates standalone replay benefit."
+    },
+    {
+      "issue": 211,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/211",
+      "brief": "issue-211.md",
+      "boundary": "A selected sent mode or recomputed checksum is not proof of receiver effect. Excluded IDs are not absent bus traffic; sparse old data cannot override newer observed speed/gear. The alternative293 input is a lead, not a recovered consumer. Renaming SPORT to STANDARD and correcting unsupported temperature decoding are separate UI/data fixes, not boost validation."
+    },
+    {
+      "issue": 70,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/70",
+      "brief": "issue-70.md",
+      "boundary": "Preserve the failed test and the explicit retraction. No display-caused starvation or exact warning trigger is proved. The hands-level meanings and pulse-effect theory remain version-scoped hypotheses unless separately validated; a proposed implementation and an earlier anecdotal improvement do not close the later failure. No final successful retest appears."
+    },
+    {
+      "issue": 104,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/104",
+      "brief": "issue-104.md",
+      "boundary": "A successful selected-ID trace supports that path and time window; it is not universal proof that every frame is retained or that timestamps have perfect fidelity. Preserve controller/filter/ring provenance, length and observed loss counters. The initial broad culprit explanation and the claimed all-ID sampling rate are source-specific, not a diagnosis of another implementation."
+    },
+    {
+      "issue": 117,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/117",
+      "brief": "issue-117.md",
+      "boundary": "The supported outcome is that this additive rewrite did not win on this setup. It does not prove all capability authority is backend-only, identify the receiving service or demonstrate what would happen if authentic frames were replaced. The two reported gateway states and status layouts must remain separate profiles. A climbing TX counter is weaker than independently captured receiver-side payload and acceptance evidence."
+    },
+    {
+      "issue": 29,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/29",
+      "brief": "issue-29.md",
+      "boundary": "This is a substantive reported HW3 success after changing the connection, not merely a ready flag. It does not establish current software compatibility, identify the exact receiving consumer or validate every feature. Early partial behavior, later positive behavior and residual braking problems are distinct stages. Connector orientation and contradictory initial bus advice must not be turned into a universal wiring instruction. The maintainer’s separate mobile-access/cellular advice is not validated by this test."
+    },
+    {
+      "issue": 73,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/73",
+      "brief": "issue-73.md",
+      "boundary": "A warning setting, merged parser change or beta release is not an independently validated protection bypass. Hardware labels in settings and inferred labels in discussion are not measured hardware identity. Reports of one message appearing on one connection do not establish its universal bus location. Reduced nagging is described subjectively here; no precise causal measurement is supplied. The thread ends with an unresolved operational failure and a request for evidence."
+    },
+    {
+      "issue": 109,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/109",
+      "brief": "issue-109.md",
+      "boundary": "The thread does not establish one universal sleep cause. Active traffic, passive electrical presence, connection location and vehicle wake behavior are distinct hypotheses. An RX capture without modification frames does not by itself prove the attached device has no effect. The reported switched-power result and board-specific implementation are useful leads; neither is evidence that another scanner experienced a physical sleep transition. Source comments make broad electrical and sleep claims that require board-specific verification."
+    },
+    {
+      "issue": 191,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/191",
+      "brief": "issue-191.md",
+      "boundary": "This supports reported partial HW3 nag functionality with significant unresolved reliability issues, not a clean universal success. The finite post-supply-change drive is an association rather than isolation of the cause. A controller send-failure count, a gap in a recorded counter and a vehicle safety fault are different observations. The latest recording regression prevents treating the requested follow-up record as obtained; no final causal diagnosis is supplied."
+    },
+    {
+      "issue": 38,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/38",
+      "brief": "issue-38.md",
+      "boundary": "The verified distinction within the reports is received traffic, modification counters, displayed hardware and actual vehicle behavior. Correcting the first three does not prove the fourth. Early broad bus, server-check and hardware-field explanations are hypotheses or source-specific claims, not recovered receiver evidence. The final label-fix confirmation must not be promoted to a successful FSD test."
+    },
+    {
+      "issue": 110,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/110",
+      "brief": "issue-110.md",
+      "boundary": "Physical hardware identity, observed signal layout and selected parser/injection profile are separate axes. A correct label can select an incompatible path; a HW3-selected path working on reported HW4 is not proof the vehicle is HW3. The maintainer also corrects the feature-port explanation: Config Replay is absent from the ESP32 dashboard in the discussed build, rather than merely hidden by hardware. No universal wiring, successful Restore or backend-unlock conclusion follows from these reports."
+    },
+    {
+      "issue": 2,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/2",
+      "brief": "issue-2.md",
+      "boundary": "The early positive, proposed workaround, corrected branch guidance and later failures are not one timeless compatibility result. The positive HW4 report is a reported outcome, not matching-receiver proof. Preflight and server-entitlement explanations are maintainer conclusions here; this thread does not recover their binary implementation. It also contains unsupported connectivity, subscription-persistence and service-result generalizations, plus an incorrect expansion of the Summon abbreviation. Those claims are not adopted as technical facts. Linked discussions require their own full-text assessment."
+    },
+    {
+      "issue": 206,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/206",
+      "brief": "issue-206.md",
+      "boundary": "Successful flashing and dashboard operation are not proof that both CAN controllers function. Matching another project’s configured pins does not rule out all hardware, assembly or startup problems. No final positive second-channel capture is supplied in the visible thread. Classic-CAN mode on an FD-capable controller must also remain distinct from transmitting CAN-FD frames. The controller bring-up result does not establish vehicle feature compatibility."
+    },
+    {
+      "issue": 95,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/95",
+      "brief": "issue-95.md",
+      "boundary": "The source supports a reported checksum recovery and a decision not to expose stalk injection, not a successful vehicle engagement test. Simultaneous transmission collisions and receiver counter validation are separate mechanisms; the broad impossibility conclusion is not a recovered receiver proof here. An ID correlated with gear state is not automatically the gear command. Conversely, failure to find a new ID at a shift edge does not prove the request moved to Ethernet: existing IDs and fields could carry it. Generic platform/stalk and connector claims require exact variant validation, and full-rate claims require capture-loss evidence."
+    },
+    {
+      "issue": 1,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/1",
+      "brief": "issue-1.md",
+      "boundary": "Body generation, MCU generation, Autopilot hardware and selected message profile must remain separate. The early assertion that every HW3 vehicle uses one request ID is broader than the evidence and is not adopted. This project independently has different older HW2.5 and HW3 request-decoder artifacts; neither establishes all platform variants. Visualization, partial stopping, reduced nags and full FSD are distinct outcomes. The final Summon test is only proposed, not completed. Broad prevention and compatibility promises in early replies are not proof."
+    },
+    {
+      "issue": 14,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/14",
+      "brief": "issue-14.md",
+      "boundary": "The corrected prerequisite statement is a maintainer position; its detailed offline entitlement-cache explanation is not independently recovered firmware evidence. The cited positive report is evidence for that participant’s setup, not universal compatibility. An unchanged page can be a legitimate no-op, while a changed request still does not prove acceptance. Auto-identification claims must be checked against the actual network and source profile; absence from one DBC is not an exhaustive bus inventory. Personal accusations and resale discussion contribute no technical proof."
+    },
+    {
+      "issue": 52,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/52",
+      "brief": "issue-52.md",
+      "boundary": "The thread does not demonstrate a successful AP-First fix on that tested HW3 build. Preflight/content-validation and backend/location explanations are maintainer interpretations, not recovered modern receiver implementations. Later subscription-independent capability claims conflict with the prerequisite explanation in issue14; neither resolves the authorization architecture by itself. Do not copy proposed pin maps, termination advice or universal status-ID assumptions as verified wiring. Visualization, AP readiness and retained engagement are separate results."
+    },
+    {
+      "issue": 43,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/43",
+      "brief": "issue-43.md",
+      "boundary": "Scroll-button emulation, AP engagement and FSD capability modification are different functions. The earlier positive is real participant evidence for its tested setup, not a durable cross-version or HW3 result. The maintainer’s later preflight explanation remains an interpretation of observed aborts. Do not adopt the thread’s assumed universal status layouts, replacement/invisibility claims or checksum guesses. Its decimal-message-ID versus hexadecimal notation and checksum discussion are internally inconsistent; use the original definition and profile before assigning a field. A valid checksum or visible state change does not establish a command consumer."
+    },
+    {
+      "issue": 122,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/122",
+      "brief": "issue-122.md",
+      "boundary": "Read each result by feature, source profile and test phase: nag reduction is not FSD activation, correct AP display is not correct hardware identification, and finite success is not universal reliability. The tracker body’s blanket server-derived tier/off-CAN conclusions exceed the additive-replay observation in issue117 and remain upstream interpretations. Its later referenced content-specific preflight study is a separate tested setup, not modern receiver code recovered here. Claims that a handler replaces originals, that a diagnostic bus hint identifies the network, or that unchanged torque shape excludes timing/acceptance problems are not adopted without matching proof. Final black-box submission evidence is requested, not delivered in this thread."
+    },
+    {
+      "issue": 17,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/17",
+      "brief": "issue-17.md",
+      "boundary": "The positive refreshed-platform HW3 result must be retained alongside its later regression. It does not prove a universal modern compatibility claim or identify the 0x331 consumer. Asynchronous gateway processing, entitlement-cache expiry, downloaded model-weight availability and reboot causation are maintainer explanations without recovered matching receiver proof. The thread repeatedly corrects wiring, MCU generation and Legacy/HW3 classification, so early advice cannot be reused timelessly. A crash fix, TX counter, temporary UI option, visualization and actual control each require a separate outcome label."
+    },
+    {
+      "issue": 100,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/100",
+      "brief": "issue-100.md",
+      "boundary": "This thread supports setup-specific observed successes and failures, plus important reversals of bus identity, state layout, capture attribution and configuration advice. It does not recover a universal preflight algorithm or prove that every HW4 tap requires the same bus. Dashboard readiness, handler modifications, submitted traffic, nag suppression and maintained control are distinct outcomes. Error-limited or short captures cannot establish generation-wide ID absence; third-party device efficacy and causal mechanisms remain reported rather than independently verified."
+    },
+    {
+      "issue": 108,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/108",
+      "brief": "issue-108.md",
+      "boundary": "The thread supplies actual reported HW3 activation and residual failures, plus unusually important corrections to capture origin and firmware-port behavior. RX equality cannot stand in for TX equality. State and steering correlation do not prove an internal planner cause, and a clean AP-only run is not the same-mode counterfactual for injected FSD. Timing, enum labels, road context, firmware path and actual emitted payload must stay attached to each result. No claim here proves current HW4 acceptance, a universal safe activation method, or a solved narrow-road fault."
+    },
+    {
+      "issue": 18,
+      "status": "complete_visible_thread_synthesis",
+      "source": "https://github.com/hypery11/flipper-tesla-fsd/issues/18",
+      "brief": "issue-18.md",
+      "boundary": "The configuration rewrite is a valuable platform-specific positive lead. Available older APE decoders assign a different scalar meaning to the same numeric 0x331 ID on their routed input, so physical bus, source schema and consumer remain the missing link; the reported success must not be dismissed or generalized. A locally already-matching input yields no Restore transformation and is not the same intervention. Distinguish UI restoration, actual traffic-control behavior, full FSD activation and reversal of backend restrictions. No current HW4 receiver, universal preflight algorithm or reliable enforcement-prevention mechanism is established by this thread."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Issue 206
+
+**An FD-board build existed, but its second controller remained unverified and failed probing.**
+
+The request concerns a board variant with a different SPI controller, not a change to vehicle-side FSD logic. The maintainer initially says a fork contains a starting implementation, then [corrects that claim: the fork has no FD driver](https://github.com/hypery11/flipper-tesla-fsd/issues/206#issuecomment-6150348983). A [dedicated build is subsequently announced](https://github.com/hypery11/flipper-tesla-fsd/issues/206#issuecomment-6162159101), with unresolved crystal-frequency evidence and a proposed startup check. Although a participant initially says it flashes and works, the [actual vehicle follow-up says the SPI channel fails while the native controller works](https://github.com/hypery11/flipper-tesla-fsd/issues/206#issuecomment-6202891437). The [maintainer identifies failed controller initialization](https://github.com/hypery11/flipper-tesla-fsd/issues/206#issuecomment-6291872769), acknowledges misleading warnings and a false quiet-time value, and ships more diagnostics. The [later probe still reads no response](https://github.com/hypery11/flipper-tesla-fsd/issues/206#issuecomment-6511858642); the thread ends with further debugging requested.
+
+Review covered the issue and 15 visible comments. [Upstream discussion](https://github.com/hypery11/flipper-tesla-fsd/issues/206).

@@ -219,7 +219,7 @@ The custom C6 board adds modified frames; the inspected dispatcher/capture path 
 - ForceFSD/Assist is a predicate-controlled bit38 modification, distinct from GUI FSD selection and the separate unlock preset.
 - Disabling Assist stops its processing; disabling ForceFSD can leave Assist examining frames while making zero modifications.
 - LaneGraph and visualization named overrides operate per frame. In the retained comparison, observed RX page0 visualization bit37 was already1, so setting it on was a predicted no-op; this is not actual submitted-payload proof. Unchanged outputs can be skipped. Configuration/session boundaries reset readiness and require new RX.
-- A journal of actual backend-submitted bytes was built/reviewed locally but not deployed. It records backend events/completion, not pre-admission skips or ECU acceptance.
+- The deployed TX journal records backend submissions and completions. It provides no pre-admission skips or vehicle acceptance evidence.
 
 Inspected upstream [predicate](https://github.com/hypery11/flipper-tesla-fsd/blob/main/fsd_logic/fsd_can_ops.h#L59) has no universal HW4 exclusion. [ESP32 handler](https://github.com/hypery11/flipper-tesla-fsd/blob/main/esp32/.firmware/fsd_handler.cpp#L393) places Assist before the hardware split; unlock writes46/60 on HW4 and46 on HW3. [README description](https://github.com/hypery11/flipper-tesla-fsd/blob/main/README.md#L102) distinguishes bypassing UI selection. A [version-specific regression report](https://github.com/hypery11/flipper-tesla-fsd/blob/main/README.md#L243) is not universal failure. The [Flipper C Nav/Lane branch](https://github.com/hypery11/flipper-tesla-fsd/blob/main/fsd_logic/fsd_handler.c#L280) is separate from ESP32 coverage.
 
@@ -367,16 +367,16 @@ That isolation harness omitted unsubscribed DROP events. Heartbeat,bus,error,fau
 
 [Experiment narrative](docs/experiments.md) · [methodology](docs/methodology.md#live-work).
 
-## 13. Local tooling and deployment state
+## 13. Tooling verification and deployment state
 
 | Tool | Verification snapshot | State |
 |---|---|---|
 | Host WebSocket CLI |42targeted offline tests;reviewer35;read-only live status/capture checked. | Host use checked; not the historical interrupted harness. |
-| Actual backend TX journal |16-event payload/result/terminal lifecycle with boot cursor;53host cases/8022assertions;firmware build passed;review clean. | Not deployed; current device command unavailable, handled gracefully. |
-| Passive feedback UI/firmware |5IDs/11fields;58APE cases/8302assertions;42UI tests;checks/build passed;review no blockers. | Not deployed. |
+| Actual backend TX journal |16-event payload/result/terminal lifecycle with boot cursor;53host cases/8022assertions;firmware build passed;review clean. | Historical verification snapshot; subsequently deployed in the release below. |
+| Passive feedback UI/firmware |5IDs/11fields;58APE cases/8302assertions;42UI tests;checks/build passed;review no blockers. | Historical verification snapshot; expanded diagnostics subsequently deployed. |
 | Modern parsing inventory/consolidation | Extraction,source pointers and strict parsing reviewed. | Specification evidence, not validated live hardware semantics. |
 
-Counts describe different snapshots and must not be added together. Build success is not deployment or device validation. The journal would prove actual driver-submitted bytes/results, still not ECU accepted/enabled/active state. Automatic hardware selection from raw5 was not implemented; manual selection remains preserved.
+Counts describe different snapshots and must not be added together. Build success is not deployment or device validation. The deployed journal records actual driver-submitted bytes/results; a retained, request-correlated journal capture is still needed. It does not establish ECU accepted/enabled/active state. Automatic hardware selection from raw5 was not implemented; manual selection remains preserved.
 
 ### 13.1 Silence, restart and sleep boundary
 
@@ -406,8 +406,8 @@ Each row retains a distinct route; documented or parked does not mean abandoned 
 | R16 Restore | Already-target no-op understood. | Receiver outcome for a changed request. |
 | R17 Assist | Predicate/bit38/TX processing differentiated. | Accepted state and policy result. |
 | R18 Hardware | Profiles explicitly separated. | Paired modernHW3/HW4 evidence. |
-| R19 Passive diagnostics | Locally built/reviewed. | Deployment/device validation. |
-| R20 Deployment | No firmware deployment in record. | Authorized future deployment/validation. |
+| R19 Passive diagnostics | Built, reviewed and deployed; boot readback checked. | Request-correlated diagnostic validation. |
+| R20 Deployment | OTA release boot/self-test/configuration readback passed. | Feature-outcome validation remains separate. |
 | R21 Debug setter | Generic receiver/access partly classified. | Authoritative propagation/exact target conversion. |
 | R22 EU/DCAS/restart | Key,distribution,conditional restart. | External sender/concrete restarter/runtime. |
 | R23 Modern spec | Bounded extraction/review. | Matching hardware semantic validation. |
@@ -416,7 +416,7 @@ Each row retains a distinct route; documented or parked does not mean abandoned 
 | R26 Visualization | Per-frame source/callback. | Downstream renderer/timeout/HW4path. |
 | R27 Isolated phases | No stable candidate changes. | Not engagement/driving validation. |
 | R28 CLI | Local tests/read-only use. | Full guarded-harness integration distinct. |
-| R29 TX journal | Backend events implemented/reviewed. | Deployment and submitted-byte capture. |
+| R29 TX journal | Backend events implemented, reviewed and deployed. | Retained submitted-byte capture correlated to a request. |
 | R30 Parked/flicker | Stable measured parked requests. | Driving/reboot asymmetry. |
 | R31 Feature feedback | Candidate mapping/implementation. | Matching producer/acceptance validation. |
 | R32 Consolidation |55/37/2700/18review complete. | Source hardware/network applicability. |
@@ -444,10 +444,31 @@ The two recovered CH profile files record repository origin [tesla_can_signals](
 
 The [separate derived HW2.5 profile](https://github.com/talas9/tesla_can_signals/blob/main/research/README.md) is now published: four message IDs and seven recovered fields, with per-field binary locations, interpretation boundaries and a standalone validator. It leaves the archived compact originals unchanged. Old input `0x3EE` mux0 bits37/38/46 and mux1 bit45 are separated from outputs `0x399` bits0–3, `0x247` bits32–38 and `0x5D9` mux2 bits46–52. Network identity and message-length contracts remain unresolved where not proven; modern enums are not copied into the older profile. Existing modern definitions are a separate source class, not new discoveries supplied by this sidecar. Validation and independent factual/privacy review passed. This publication does not validate current HW4 compatibility or identify a HOLD `+0x68` wire field.
 
-Diagnostic implementation is a separate, locally verified milestone, still pending deployment: additional passive candidates, source-linked TX evidence, TLSSC matched counters and observed hardware candidates preserve configured engine gates. These features do not supply vehicle acceptance or promote an observed candidate into verified hardware identity.
+Diagnostic implementation is a separate milestone, now deployed: additional passive candidates, source-linked TX evidence, TLSSC matched counters and observed hardware candidates preserve configured engine gates. These features do not supply vehicle acceptance or promote an observed candidate into verified hardware identity.
+
+Release milestone: the diagnostic tool update was published and OTA boot-verified. Twelve post-boot samples passed self-test with no faults or rollback pending; saved configuration stayed unchanged. Compact feedback and source-linked TX telemetry are now deployed. This verifies the tool release, not a feature outcome or vehicle acceptance; browser interaction coverage remains limited by the test environment.
 
 Public references: [GUI/request diagrams](docs/trace-details.md), [source profiles](docs/signal-profiles.md), [experiments](docs/experiments.md), [all routes](docs/route-index.md), [corrections](docs/corrections.md), [implementation/open work](docs/evidence-and-open-work.md), [sources](docs/sources.md), [methodology](docs/methodology.md), [main narrative](docs/research-paper.md).
 
 Privately retained proof roles: recursive CID node/edge ledger; source-location and ELF disassembly reports; older receiver/ASM shared-memory notes; emitter registry/metadata and packing exports; newest paired-load wire-consumer report plus machine-readable table/packing checks; canonical candidate-field matrix; separate per-cohort summaries/raw captures; guarded nine-window and awake comparison reports; local implementation test/review/build reports. These are roles, not public links or promises that original files may be redistributed. Obsidian tools/destination were unavailable; local artifacts carried persistence.
 
 Priority next work is a matching modernHW4receiver/publisher and independent accepted/enabled-state oracle. In the older profile, next bounded targets are remaining ASM+0x68aliases/shared-reader consumers, raw RoadRunner event names and the original result12schema; in the live path, exact submitted payload/cadence would distinguish modifier execution from RX visibility. Backend policy, actual maps/runtime values, remaining GUI lifecycle sources, driving flicker and ECU-sleep behavior remain separate open questions. None should be closed by a suggestive enum name or an unchanged parked field.
+
+### Upstream issue synthesis
+
+The [issue evidence index](docs/upstream-issues/README.md) covers 122 public briefs from a snapshot of 123 issues and 1,287 visible comment bodies. One thread was withheld for privacy. REST and GraphQL exposed four of five advertised bodies on #19 and ten of fourteen on #103. GraphQL reported no next page. This leaves five unexplained count discrepancies.
+
+- **#49** cites an older refreshed-HW4 TLSSC report that describes actual slowing and stopping. The thread adds no successful result from the questioner. The separate HW3 report has a later software regression. [Brief](docs/upstream-issues/issue-49.md)
+- **#193** records a feature interaction on refreshed HW3. The maintainer withdrew the dual-bus explanation and corrected an earlier gear interpretation. The retrieved follow-up does not establish the cause. [Brief](docs/upstream-issues/issue-193.md)
+- **2026.14.x preflight** is a maintainer attribution. The reviewed evidence does not identify that gate in matching firmware or tie it to the current `APP_w462` warning. [Brief](docs/upstream-issues/issue-2.md)
+
+### November 12 diagnostics and source limits
+
+- **Firmware**. OTA to scanner firmware 1.20 booted successfully and preserved saved settings and the five-event diagnostic history. A repeat Wi-Fi OTA also passed with two WebSockets open. Physical replug behavior and a matching AP-mode OTA run remain open.
+- **Passive warning window**. The complete `APP_w462` window had 11 fresh samples. It showed the alert onset and persistence through +5 seconds. Port A reported running, zero sampled errors or drops and no bus-off throughout. A nearby `0x191` sample decoded raw reason 4. The same raw value was also seen while `APP_w462` was clear, so causality remains open.
+- **Private upload**. An authenticated readback confirmed browser delivery from UI 0.16.7 and matched the earlier local `APP_w462` window. The stored report does not encode the upload trigger or the phone's routing. A distinct direct scanner upload carried an `APP_w478` window. The published flag identifies a run-mode-switch warning. The two mode names and an APE reboot remain unverified.
+- **Browser reliability**. UI 0.16.8 sequences initial diagnostic reads, pauses periodic status polling during Copy for LLM and expires unsent WebSocket requests. Targeted tests, bundle tests, type checks and published asset checks passed. In an offline reproduction, a 2,155-byte history reply queued behind a 3,900-byte in-flight status reply exceeded the 2,048-byte residual reply limit. Sequential replies stayed connected. Live recurrence and attribution of historical close code 1008 remain open. Published UI 0.16.9 distinguishes saved hardware from the observed candidate and prevents overlapping diagnostic requests on remount. Thirty-nine targeted tests, type checks, the build and served asset checks passed.
+- **Platform limits**. The archived HW2.5 visualization analysis found a shared UI payload reaching two helpers. The inspected slices did not establish a downstream visualization expiry or boot latch. The archived HW3 DevMode decode has bounded reader coverage. The matching current HW4 executable remains absent from the reviewed inventory.
+- **Catalogue checks**. The 2026.26.6.5 Model 3/Y CH catalogue already contains `0x439 APP_warningMatrix3` and `0x47D APP_warningMatrix6`. The older 2025.20.8 ETH catalogue contains overlapping definitions. Cross-platform wire identity and applicability to the current Model X/S HW4 remain open. [CAN signal catalogue](https://github.com/talas9/tesla_can_signals)
+
+The next stock diagnostic evidence is the expanded recent Service Alert record. It can supply warning context independent of the passive profile. [Tesla Service Mode guide](https://service.tesla.com/docs/Public/ServiceMode/service_mode_user_guide.pdf)

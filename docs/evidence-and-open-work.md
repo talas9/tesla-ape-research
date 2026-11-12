@@ -17,8 +17,8 @@ Raw captures and original artifacts remain private. Some reported addresses lack
 | Tool | Verification | Deployment |
 |---|---|---|
 | Host CLI | 42 targeted offline tests; reviewer ran 35; read-only live status/capture left settings unchanged. | Host tool checked live. |
-| Actual backend TX journal | 16-event payload/submission/completion journal with boot cursor; 53 host cases / 8022 assertions; firmware build 1,161,872 bytes, 41% free; review clean. | Not deployed; current firmware lacks its command. |
-| Passive feature feedback | 5 IDs / 11 fields; 58 APE cases / 8302 assertions; 42 UI tests; build/check passed with no warnings; review clean. | Not deployed. |
+| Actual backend TX journal | 16-event payload/submission/completion journal with boot cursor; 53 host cases / 8022 assertions; firmware build 1,161,872 bytes, 41% free; review clean. | Deployed. The journal describes scanner transport only. |
+| Passive feature feedback | 5 IDs / 11 fields; 58 APE cases / 8302 assertions; 42 UI tests; build/check passed with no warnings; review clean. | Deployed with later additions. HW4 field applicability remains open. |
 
 Test totals describe separate snapshots and are not additive.
 
@@ -33,7 +33,7 @@ Test totals describe separate snapshots and are not additive.
 | Hardware inference | Authoritative meaning of raw value 5; manual selection remains in use. |
 | Feature sweep | Cases and combinations not reached before the interrupted run. |
 | Driving visualization flicker | Submitted TX cadence and downstream rendering/receiver behavior. |
-| Diagnostic deployment | Device validation of the new journal and passive feedback implementation. |
+| OTA and reconnect | Wi-Fi OTA and passive report delivery verified. Physical replug and AP-mode OTA remain open. [Release evidence](../LLM.md#november-12-diagnostics-and-source-limits) |
 
 Signal consolidation is complete and independently reviewed: 3 tests, strict parsing and source-pointer checks passed for 55 selected IDs, 37 definitions, 2700 signals and 18 missing definitions. [Profiles](signal-profiles.md).
 

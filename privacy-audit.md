@@ -1,9 +1,7 @@
 # Publication privacy audit
 
-Status: curated export frozen for independent review; this file is not publication approval.
+The [manifest](manifest.json) lists the curated public export. The November 12 update adds derived diagnostic findings and concise upstream issue briefs. Raw comments, attachments, exact private event times, original firmware and unredacted vehicle reports stay outside the public tree.
 
-Every file in the manifest was inspected as text. The public export uses generic hardware classes and relative experiment phases. It contains independent notes, minimal numeric findings and public upstream references.
+The audit checks changed text for identifying vehicle or user details, network addresses, local paths, long identifiers, raw payloads, credentials and identifying issue links. Public references point to upstream discussions, reference material and official documentation. A private issue-comment draft remains outside this export.
 
-Checks passed for identifying vehicle/user details, exact vehicle versions/dates, location/import route, network/connection addresses, local absolute paths, long identifying hashes, raw payloads, credentials and own issue/gist links. No original Tesla files, screenshots, raw captures, DBC/compact database exports, binaries or source excerpts are included. The private issue-comment draft is outside this tree.
-
-Relative links, JSON syntax and diagram fence balance were checked. These bounded checks do not certify unexported private material or replace the independent privacy reviewer. Public source links use a mutable upstream branch; the inspected revision stays private. Publication license is not selected.
+Coverage checks reconcile the manifest, 122 issue briefs, local links and machine-readable claim ledger. One issue is omitted to protect privacy. Two issue counters advertise five more comments than either API exposes. The [coverage note](docs/upstream-issues/README.md#coverage) records the observed counts.
