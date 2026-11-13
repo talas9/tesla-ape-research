@@ -33,9 +33,9 @@ Test totals describe separate snapshots and are not additive.
 | Hardware inference | Authoritative meaning of raw value 5; manual selection remains in use. |
 | Feature sweep | Cases and combinations not reached before the interrupted run. |
 | Driving visualization flicker | Submitted TX cadence and downstream rendering/receiver behavior. |
-| `APP_w462` engagement refusal | Tesla documents the failed engagement attempt. The expanded Service Alert and any companion alerts from the same event may add context. [Official alert evidence](../LLM.md#tesla-alert-dictionary) |
+| `APP_w462` engagement refusal | The archived producer and service UI agree on the reason fields. Attribution still needs evidence from the actual event on matching HW4. [Diagnostic evidence](../LLM.md#november-13-eligibility-and-rejection-evidence) |
 | OTA and reconnect | Wi-Fi OTA and passive report delivery verified. Physical replug and AP-mode OTA remain open. [Release evidence](../LLM.md#november-12-diagnostics-and-source-limits) |
 
 Signal consolidation is complete and independently reviewed: 3 tests, strict parsing and source-pointer checks passed for 55 selected IDs, 37 definitions, 2700 signals and 18 missing definitions. [Profiles](signal-profiles.md).
 
-The [route index](route-index.md) tracks all branches, including documented GUI work that is currently parked. The issue comment remains a private draft. No Obsidian tool or destination was available; research persistence used local project artifacts.
+The [route index](route-index.md) tracks all branches, including documented GUI work that is currently parked.

@@ -50,6 +50,8 @@ flowchart LR
 
 `hasAutopilotAndNavData()` is `forceHasAutosteer OR (hasAutopilot() AND navigationDataAvailable())`. Its remaining nested capability leaves are not all closed. Camera eligibility returns false only for valid `APP_teslaVisionUnsupportedReason` raw2 in the inspected helper. Parked and camera checks decide whether the offered entry is usable; the maps message alone does not prove an outdated installed package.
 
+The framework enforces the entry limit on touch. `canEnableFSDControl()` feeds `SlideSwitch::setNumLastEntriesDisabled()`, and `touchToPos()` clamps the position that `released()` submits. `updateTopLevelAPSelection()` separately reads the saved FSD and Autosteer requests to paint the selected position.
+
 **Forward: what does selecting FSD actually write and send?**
 
 ```mermaid
@@ -173,7 +175,8 @@ The marker is established by the inspected startup `is-fused` script chain; its 
 | Input | Recovered source and boundary |
 |---|---|
 | Gateway configuration | Internal ETH `0x7FF` fields feed country, hardware, tier, package and map-region VAPI values through CRC-keyed DataValue registration. Physical routing and current hardware enums require separate evidence. |
-| Managed features | Response parsing writes a feature map; registered policy updates feature DataValues. Startup persistence can supply cached values. Server decision logic is outside the client. |
+| Managed features | `FeatureConfigManager` requests vehicle `feature_configuration` with hardware and Autopilot inputs from VAPI. The parser writes `GUI_featureConfig` and registered policies update feature values. Startup persistence can supply cached values. Server decision logic is outside the client. |
+| Driver profile | `ProfileManager::downloadVault()` uses `AccountManagerUIClient` to fetch profile data. A separate guarded restore path updates the saved Autopilot selection. |
 | Localized country | Navigation country and on-map state are distinct from gateway factory country. Map-match administrative country depends on installed map data. |
 | Map region/wrong region | Folder, version, mount and suppression branches contribute; some early returns retain the previous flag. |
 | Stock force settings | Consumer and environment/fuse checks are necessary. Two original force-map objects had no consuming reads in the inspected 15-ELF/30-object set; indirect uses and other builds remain open. |
@@ -181,6 +184,8 @@ The marker is established by the inspected startup `is-fused` script chain; its 
 ## Requests and transport
 
 FSD confirmation writes `GUI_fsdControlEnabled=true`; TLSSC confirmation writes `GUI_fsdStopsControlEnable=true`. The three-mode selector has separate off/Autosteer writers and does not simply set TLSSC.
+
+The TLSSC callback passes visibility to `DisplayView::show()` and clickability to `DisplayView::enable()`. For the ordinary transition from off to on, eligibility, maps, parked state and calibration all matter. The already-enabled and active-cruise paths have separate handling.
 
 VAPI `AutopilotControlMessage::assembleMessage` rechecks eligibility before assembling fields:
 
