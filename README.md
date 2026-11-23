@@ -2,6 +2,8 @@
 
 Full Self-Driving (Supervised) asked for updated navigation maps. Traffic Light and Stop Sign Control (TLSSC) said the region was unsupported. I followed both messages through the touchscreen code, then compared the recovered paths with passive observations from a custom C6 board with a CAN transceiver. An LLM wrote this research and documentation.
 
+Evidence through November 21, 2026; publication updated November 23. The newer observations narrow the investigation but do not establish the current HW4 rejection predicate.
+
 ## What the research found
 
 | Step | Finding |
@@ -11,7 +13,8 @@ Full Self-Driving (Supervised) asked for updated navigation maps. Traffic Light 
 | 3. Follow the buttons | In the inspected touchscreen build, the FSD eligibility check limits which positions the selector accepts. TLSSC has a separate toggle enable check. A confirmed choice updates a saved GUI value. [Button flows](docs/trace-details.md#fsd-maps-warning-and-selection) |
 | 4. Compare vehicle status | Older APE binaries and newer signal catalogues expose candidate feedback. A diagnostic history records when a warning appears and what the scanner saw around it. [Signal profiles](docs/signal-profiles.md) |
 | 5. Compare upstream reports | One historical refreshed HW4 setup reportedly restored TLSSC stopping. A separate HW3 report documents an interaction and two corrected diagnoses. The 2026.14.x preflight claim remains an upstream explanation. [Issue evidence](docs/upstream-issues/README.md) |
-| 6. Verify diagnostic delivery | Scanner firmware 1.20 booted successfully after OTA. A complete warning window reached private storage through the browser. UI 0.16.9 shows the saved profile beside the observed hardware candidate and fixes overlapping requests on remount. [Verification](LLM.md#november-12-diagnostics-and-source-limits) |
+| 6. Capture the refusal | Firmware 3.0 and UI 0.16.20 delivered warning-aligned receiver context to private storage. Autosteer reason 91 and ACC reason 69 were fresh before, at and after `APP_w462`. Their reference labels point to unsupported user settings, without identifying which condition failed. [November 18–19 evidence](LLM.md#november-18-21-evidence-update) |
+| 7. Read native map support | A November 21 stored wake-up snapshot reported FSD navigation maps unsupported, Drive-on-Nav maps okay and FSD stops maps unsupported. These are distinct states, not an engagement-time trace or proof of the backend decision. [Native values](LLM.md#native-snapshot-november-21) |
 
 ## The variables behind the screen
 
@@ -25,7 +28,7 @@ The recovered paths are from the ICE-based QtCar image. The predicate and featur
 | `GUI_navigationMapWrongRegion` | A separate check in `NavMapController::updateMapStatus()` for the expected map directory. |
 | `vapi/forceHasFSDNavMaps` and `vapi/forceHasFSDStopsMaps` | Both settings were found. The bounded search found no consuming read for either in the inspected path. |
 
-`FeatureConfigManager::updateFeatureConfigs()` applies the managed keys from `GUI_featureConfig`. Server-side policy and matching current HW4 runtime values remain open. [Source trace](docs/trace-details.md#value-producers)
+`FeatureConfigManager::updateFeatureConfigs()` applies the managed keys from `GUI_featureConfig`. Some native values are now observed in a stored snapshot; server-side policy, missing inputs and their event-time values remain open. [Source trace](docs/trace-details.md#value-producers)
 
 ```mermaid
 flowchart LR
@@ -55,14 +58,14 @@ flowchart LR
 | `0x4D1` | `APP_w462`, `APP_w478` | Warning observations for temporary unavailability and a run-mode switch. The switch flag does not identify either mode. |
 | `0x5D9` | `DAS_autosteerUnavailableReason`, `DAS_accUnavailableReason` | An archived APE producer and a 2026 service UI agree on field layout. The paired observations leave the current HW4 rejection cause open. [Diagnostic evidence](LLM.md#november-13-eligibility-and-rejection-evidence) |
 
-The complete `APP_w462` window had 11 fresh samples, with the warning visible through five seconds after onset. The scanner recorded zero bus errors, drops or bus-off in those samples. The exact vehicle-side reason and a matching HW4 acceptance signal are still open. [Evidence](LLM.md#november-12-diagnostics-and-source-limits)
+The November 19 `APP_w462` window contained 11 bus samples with no new error-count growth, drops or bus-off. The reason pair already existed before the warning; no driver-input timestamp was captured. Separately, a source/output journal measured a request-bit combination that differs from the archived stock encoder relationship. Neither observation proves acceptance or the cause of refusal. [Latest evidence and limits](LLM.md#november-18-21-evidence-update)
 
 ## Read further
 
 - [Detailed timeline and findings](docs/research-paper.md)
 - [Evidence and open work](docs/evidence-and-open-work.md)
 - [Upstream issue index and briefs](docs/upstream-issues/README.md)
-- [Technical knowledge base](LLM.md) and [CAN signal reference](https://github.com/talas9/tesla_can_signals)
+- [Technical knowledge base](LLM.md), [modern CAN catalogue](https://github.com/talas9/tesla-can-signal-db) and [compact archive / older derived profile](https://github.com/talas9/tesla_can_signals)
 
 Firmware and APE images were acquired from Lunars. Available artifacts covered the ICE touchscreen, older HW2.5 and archived HW3 material. The matching current AMD touchscreen and HW4 APE executables were unavailable for this analysis. [Source inventory](docs/sources.md)
 

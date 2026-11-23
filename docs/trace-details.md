@@ -74,7 +74,7 @@ flowchart LR
 
 The actual writer is `FSDConfirmationPopup::fsdConfirmed(bool)`. The selector's off branch clears `GUI_fsdControlEnabled` and `GUI_autosteerOnRequest`; its paint/update function reads saved values rather than acceptance. Other profile/reset/auto-enable writers also exist, so this is a confirmed-action path, not the whole variable lifecycle.
 
-The encoder's eligibility above is `hasFullSelfDriving()`. Installed map-region validity enters through `GUI_navigationMapWrongRegion`, independently of the managed maps-support flag. Its NavMapController writer checks expected map folders after validity/mount guards; early returns can retain an earlier value. The stock bit60 equation and its configuration/fuse branches are documented [below](#stock-force-and-configuration-branches).
+The encoder's eligibility above is `hasFullSelfDriving()`. Installed map-region validity enters through `GUI_navigationMapWrongRegion`, independently of the managed maps-support flag. Its NavMapController writer checks the expected map directory after validity/mount guards; an existing directory clears the flag, while a missing directory writes the inverse of the map-alert suppression condition. Early returns can retain an earlier value. The inspected resolver is not a direct comparison between configured vehicle country and installed map region. No direct transmission of this flag to the APE has been established. The stock bit60 equation and its configuration/fuse branches are documented [below](#stock-force-and-configuration-branches).
 
 ### TLSSC region warning and toggle
 

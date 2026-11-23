@@ -126,7 +126,7 @@ CID-ICE internal ETH bus3, `0x7FF`, decoded by GUICanCracker, feeds:
 | p3 `8\|4` | `ETH_GTW_mapRegion` | `VAPI_navigationMapRegion` |
 | p9 `20\|2` | `ETH_GTW_autopilotFeaturePackage` | `VAPI_autopilotFeaturePackage` |
 
-DataValue registration stores a source name and CRC-keyed target. Decoder `storeSignalValue` looks up that target and invokes its setter; a separate source DataValue object is not required. Internal ETH framing and bus3 dispatch do not establish physical Chassis CAN routing or the originating gateway algorithm. A captured hardware raw5 must not be automatically named HW3/HW4 from this work.
+DataValue registration stores a source name and CRC-keyed target. Decoder `storeSignalValue` looks up that target and invokes its setter; a separate source DataValue object is not required. Internal ETH framing and bus3 dispatch do not establish physical Chassis CAN routing or the originating gateway algorithm. The 2026.26.6.5 catalogue labels `GTW_dasHw` raw 5 `TESLA_AP4`; applying it to a target capture still requires matching producer/layout evidence. [Reference metadata](https://github.com/talas9/tesla-can-signal-db/blob/main/data/2026.26.6.5/signal-meta.csv).
 
 ### 5.2 Localized country and on-map state
 
@@ -376,7 +376,7 @@ That isolation harness omitted unsubscribed DROP events. Heartbeat,bus,error,fau
 | Passive feedback UI/firmware |5IDs/11fields;58APE cases/8302assertions;42UI tests;checks/build passed;review no blockers. | Historical verification snapshot; expanded diagnostics subsequently deployed. |
 | Modern parsing inventory/consolidation | Extraction,source pointers and strict parsing reviewed. | Specification evidence, not validated live hardware semantics. |
 
-Counts describe different snapshots and must not be added together. Build success is not deployment or device validation. The deployed journal records actual driver-submitted bytes/results; a retained, request-correlated journal capture is still needed. It does not establish ECU accepted/enabled/active state. Automatic hardware selection from raw5 was not implemented; manual selection remains preserved.
+Counts describe different snapshots and must not be added together. Build success is not deployment or device validation. The deployed journal records actual driver-submitted bytes/results; the November 18 retained source/output pairs now show modifier behavior, but a warning-correlated journal capture is still needed. It does not establish ECU accepted/enabled/active state. The scanner reports raw 5 as an observed hardware candidate while preserving configured effective hardware; it does not promote that observation to verified compatibility.
 
 ### 13.1 Silence, restart and sleep boundary
 
@@ -420,7 +420,7 @@ Each row retains a distinct route; documented or parked does not mean abandoned 
 | R30 Parked/flicker | Stable measured parked requests. | Driving/reboot asymmetry. |
 | R31 Feature feedback | Candidate mapping/implementation. | Matching producer/acceptance validation. |
 | R32 Consolidation |55/37/2700/18review complete. | Source hardware/network applicability. |
-| R33 Hardware inference | Raw5left unresolved. | Authoritative enum/source. |
+| R33 Hardware inference | Reference raw 5 is `TESLA_AP4`; observed candidate reported separately. | Target producer/layout applicability and effective hardware validation. |
 | R34 Follow-up | Interrupted run recovered;later nine windows completed/restored. | Unrun presets/combinations/motion cases. |
 | R35 Upstream | Predicate/handler/report distinctions reviewed. | Upstream explanations not live-root-cause proof. |
 
@@ -452,7 +452,7 @@ Public references: [GUI/request diagrams](docs/trace-details.md), [source profil
 
 Privately retained proof roles: recursive CID node/edge ledger; source-location and ELF disassembly reports; older receiver/ASM shared-memory notes; emitter registry/metadata and packing exports; newest paired-load wire-consumer report plus machine-readable table/packing checks; canonical candidate-field matrix; separate per-cohort summaries/raw captures; guarded nine-window and awake comparison reports; local implementation test/review/build reports. These are roles, not public links or promises that original files may be redistributed. Obsidian tools/destination were unavailable; local artifacts carried persistence.
 
-Priority next work is a matching modernHW4receiver/publisher and independent accepted/enabled-state oracle. In the older profile, next bounded targets are remaining ASM+0x68aliases/shared-reader consumers, raw RoadRunner event names and the original result12schema; in the live path, exact submitted payload/cadence would distinguish modifier execution from RX visibility. Backend policy, actual maps/runtime values, remaining GUI lifecycle sources, driving flicker and ECU-sleep behavior remain separate open questions. None should be closed by a suggestive enum name or an unchanged parked field.
+Priority next work is a matching modernHW4receiver/publisher and independent accepted/enabled-state oracle. In the older profile, next bounded targets are remaining ASM+0x68aliases/shared-reader consumers, raw RoadRunner event names and the original result12schema; in the live path, the November 18 source/output journal now distinguishes recorded modifier output from RX visibility within its short retained window. Backend policy, missing or event-time native values, remaining GUI lifecycle sources, driving flicker and ECU-sleep behavior remain separate open questions. None should be closed by a suggestive enum name or an unchanged parked field.
 
 ### Upstream issue synthesis
 
@@ -473,7 +473,7 @@ The [November 12 related discussion recheck](docs/upstream-issues/README.md#rela
 - **Private upload**. An authenticated readback confirmed browser delivery from UI 0.16.7 and matched the earlier local `APP_w462` window. The stored report does not encode the upload trigger or the phone's routing. A distinct direct scanner upload carried an `APP_w478` window, labeled as a run-mode switch by the reference DBC. The two mode names and an APE reboot remain unverified.
 - **Browser reliability**. UI 0.16.8 sequences initial diagnostic reads, pauses periodic status polling during Copy for LLM and expires unsent WebSocket requests. Targeted tests, bundle tests, type checks and published asset checks passed. In an offline reproduction, a 2,155-byte history reply queued behind a 3,900-byte in-flight status reply exceeded the 2,048-byte residual reply limit. Sequential replies stayed connected. Live recurrence and attribution of historical close code 1008 remain open. Published UI 0.16.9 distinguishes saved hardware from the observed candidate and prevents overlapping diagnostic requests on remount. Thirty-nine targeted tests, type checks, the build and served asset checks passed.
 - **Platform limits**. The archived HW2.5 visualization analysis found a shared UI payload reaching two helpers. The inspected slices did not establish a downstream visualization expiry or boot latch. The archived HW3 DevMode decode has bounded reader coverage. The matching current HW4 executable remains absent from the reviewed inventory.
-- **Catalogue checks**. The 2026.26.6.5 Model 3/Y CH catalogue already contains `0x439 APP_warningMatrix3` and `0x47D APP_warningMatrix6`. The older 2025.20.8 ETH catalogue contains overlapping definitions. Cross-platform wire identity and applicability to the current Model X/S HW4 remain open. [CAN signal catalogue](https://github.com/talas9/tesla_can_signals)
+- **Catalogue checks**. The 2026.26.6.5 Model 3/Y CH catalogue already contains `0x439 APP_warningMatrix3` and `0x47D APP_warningMatrix6`. The older 2025.20.8 ETH catalogue contains overlapping definitions. Cross-platform wire identity and applicability to the current Model X/S HW4 remain open. [Modern CAN signal catalogue](https://github.com/talas9/tesla-can-signal-db)
 
 ### Tesla alert dictionary
 
@@ -483,8 +483,45 @@ The expanded Service Alert and any companion alerts from the same event are the 
 
 ### November 13 eligibility and rejection evidence
 
-**Vehicle features and driver preferences.** In the inspected ICE touchscreen build, `FeatureConfigManager` requests vehicle-scoped `feature_configuration`. The request uses hardware and Autopilot inputs from VAPI. Its response parser writes `GUI_featureConfig`, which registered rules turn into managed feature values. Startup can restore these values from a cache. `ProfileManager::downloadVault()` uses `AccountManagerUIClient` for driver profile data. `restoreAutopilotFeature()` restores a saved selection after its own capability check. The FSD maps predicate participates in the actual touch-position limit, and TLSSC eligibility feeds the toggle's enable call. The server's policy and the live HW4 inputs remain open. [GUI trace](docs/trace-details.md#value-producers)
+**Vehicle features and driver preferences.** In the inspected ICE touchscreen build, `FeatureConfigManager` requests vehicle-scoped `feature_configuration`. The request uses hardware and Autopilot inputs from VAPI. Its response parser writes `GUI_featureConfig`, which registered rules turn into managed feature values. Startup can restore these values from a cache. `ProfileManager::downloadVault()` uses `AccountManagerUIClient` for driver profile data. `restoreAutopilotFeature()` restores a saved selection after its own capability check. The FSD maps predicate participates in the actual touch-position limit, and TLSSC eligibility feeds the toggle's enable call. The server's policy and the complete event-time HW4 inputs remain open; selected native values were subsequently observed in the November 21 stored snapshot below. [GUI trace](docs/trace-details.md#value-producers)
 
-**Autosteer and ACC reason layout.** The 2026.26.6.5 `service-ui` Bayberry product branch registers its diagnostic descriptor under `0x5D9`. The low four bits select the group. The little-endian Autosteer reason is mux 0, start bit 4, width 7. The ACC reason is mux 2, start bit 46, width 7. This independently corroborates the archived HW3 producer. The matching HW4 APE producer and the live vehicle's service UI product selection are still open. Evidence comes from local inspection of the original artifacts. [Public signal reference](https://github.com/talas9/tesla_can_signals)
+**Autosteer and ACC reason layout.** The 2026.26.6.5 `service-ui` Bayberry product branch registers its diagnostic descriptor under `0x5D9`. The low four bits select the group. The little-endian Autosteer reason is mux 0, start bit 4, width 7. The ACC reason is mux 2, start bit 46, width 7. This independently corroborates the archived HW3 producer. The matching HW4 APE producer and the live vehicle's service UI product selection are still open. Evidence comes from local inspection of the original artifacts. [Research signal profiles](docs/signal-profiles.md)
 
 **Passive comparison.** Offline replay joined each mux 0 sample to the latest preceding mux 2 sample within 250 ms in the same capture epoch. All 283 earlier Autosteer raw 91 samples paired with ACC raw 69. Later, Autosteer raw 48 and ACC raw 42 each occurred 21 times, with 20 qualifying pairs. The archived HW3 producer can report related internal conditions through both fields, so the values offer correlated evidence. Both captures lack an engagement attempt and have unmatched vehicle conditions. They leave the specific `APP_w462` rejection predicate on current HW4 open.
+
+
+### November 18-21 evidence update
+
+Published November 23, 2026. These findings update the earlier unknowns without treating an archived ICE/HW3 implementation as matching current HW4 code. Original artifacts, raw reports, private identifiers and personal configuration remain unpublished.
+
+**Warning-aligned receiver context, November 18–19.** Two distinct delivered FW 3.0 reports preserve version-2 receiver context with independent freshness ages. Native `0x5D9` mux-0 Autosteer reason 91 and mux-2 ACC reason 69 were fresh before `APP_w462`, at onset and one second afterward. The inspected modern service UI labels 91 `AUTOSTEER_USER_SETTINGS_NOT_SUPPORTED`; the reference DBC labels 69 `ACC_UNAVAILABLE_REASON_USER_SETTINGS_NOT_SUPPORTED`. Both values predate the warning. The archived APE producer can collapse several internal conditions to this pair, so it is an event-aligned lead rather than identification of a particular setting or current HW4 predicate.
+
+The November 19 report contains an 11-sample window with CAN running throughout, no bus-off or drops, and no increase in the cumulative error count. A saved bus-off incident belongs to a separate earlier event. The report history is partial; the uploaded payload does not include a driver-input timestamp, current feature configuration, request frames or a TX journal. The November 18 warning has no absolute event time; its upload time and the older incident timestamp cannot supply one. These limits prevent assigning either refusal to a particular scanner setting from the report alone.
+
+**Recorded source versus output, November 18.** Four distinct source frames and their corresponding modified outputs were retained over approximately 1.5 seconds. In `0x3FD` page 0, the ordered bit tuple `(46, 47, 60)` changed from `(0, 0, 0)` in the recorded source to `(1, 0, 1)` in the modified output. The catalogue names are `UI_enableFullSelfDriving`, `UI_hasFullSelfDriving` and `UI_applyDCASBehavior`. Each output had transport accepted/completed records. This is a measured source/output distinction, not a recommended payload or vehicle acknowledgement.
+
+In the inspected ICE 2026.26.6.5 stock encoder, bit 47 represents combined eligibility and bit 46 additionally requires the saved FSD request; consequently its recovered relationship does not produce bit 46 set with bit 47 clear. Bit 60 has its separate DCAS condition and saved-request check. The journal therefore differs from that archived stock relationship. Its source producer is unattributed, its window is not synchronized to the refusals, and no matching current HW4 consumer has been recovered. The comparison does not establish why the APE refused engagement. [Recovered stock path](docs/trace-details.md#fsd-maps-warning-and-selection)
+
+**Diagnostic delivery milestone.** Firmware 3.0 receiver checkpoints survived browser serialization, private storage and independent readback. A new November 19 report identifies UI 0.16.20. That UI release consolidated overlapping firmware/reconnect notices; its recorded release checks passed 81 targeted tests, nine bundle-budget checks and two mobile browser checks, with no type-check errors or warnings. A separate browser upload-origin rejection was repaired and followed by successful report delivery. This establishes those delivery paths and release checks, not universal network/OTA reliability or successful FSD activation.
+
+#### Native snapshot: November 21
+
+An authorized native read returned a stored snapshot whose source is `wakeup`. It was not produced by a new diagnostic procedure and was not simultaneous with a refusal. Preserve the actual JSON types:
+
+| Native field | Observed value | JSON type |
+|---|---|---|
+| `FEATURE_hasFullSelfDrivingNavMaps` | `"false"` | string |
+| `FEATURE_dasDriveOnNavMapsOkay` | `true` | boolean |
+| `FEATURE_hasFSDStopsMaps` | `false` | boolean |
+| `APP_teslaVisionSupported` | `"Supported"` | string |
+| `APP_teslaVisionUnsupportedReason` | `"None"` | string, not null |
+| `FEATURE_fullSelfDriving` | absent | unknown |
+| `GUI_navigationMapWrongRegion` | absent | unknown |
+
+This closes the earlier blanket statement that native maps-support values were unavailable: distinct FSD navigation, Drive-on-Nav and stops-map states were observed. It does not establish how the backend calculated them or which current HW4 gate failed. The snapshot field `FEATURE_hasFSDStopsMaps` and the archived reader's `FEATURE_dasHasFSDStopsMaps` retain their source-specific names; their equivalence is not assumed. An absent key is not false, and a feature-update timestamp is not proof of a successful fresh backend fetch.
+
+**Wrong-region calculation.** Reinspection of ICE 2026.26.6.5 `NavMapController::updateMapStatus()` confirms a local expected-directory check after validity/mount guards, with suppression and early-return behavior. The managed `FEATURE_hasFullSelfDrivingNavMaps` is a separate input. No direct country-versus-map-region mismatch test or direct WrongRegion-to-APE transmission was established in this path. The snapshot omits the wrong-region flag, so it cannot decide that branch. [Source distinction](docs/trace-details.md#fsd-maps-warning-and-selection)
+
+**DevMenu boundary.** Supplied screenshots show a Development / DevMenu button and a separate Steam Developer Mode control. Bounded literal, resource, dependency and callback searches in the archived Intel CID 2026.26.6.5 artifact did not establish the pictured button's concrete visibility/enabled predicate or click handler. Neither screenshot presence nor a similarly named CAN field establishes an activation path or its relevance to FSD refusal.
+
+**Remaining decisive evidence.** The current HW4 receiver/publisher and its rejection predicate remain unavailable. A synchronized record of native eligibility, source/output requests, driver input and warning reasons would separate the presently independent observations. Backend policy, absent native fields, and source-version applicability remain open; the existing evidence does not prove a single map update or request-bit change would resolve the refusal.

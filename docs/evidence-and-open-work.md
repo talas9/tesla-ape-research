@@ -22,6 +22,10 @@ Raw captures and original artifacts remain private. Some reported addresses lack
 
 Test totals describe separate snapshots and are not additive.
 
+## Latest evidence milestone
+
+Firmware 3.0 / UI 0.16.20 delivered a new warning report with independently aged receiver context. The November 18–19 windows include native Autosteer reason 91 and ACC reason 69 before, at and after `APP_w462`. A separate November 21 stored wake-up snapshot supplies native maps-support and vision values. A retained transmission journal also distinguishes source payloads from scanner-modified output. These are three separate evidence sets, not a synchronized causal trace. [Details and limits](../LLM.md#november-18-21-evidence-update)
+
 ## Open work
 
 | Route | What is missing |
@@ -30,11 +34,13 @@ Test totals describe separate snapshots and are not additive.
 | Positive acceptance indicator | Independent accepted/enabled state correlated with the request, separate from activity. |
 | GUI writers and child checks | Remaining profile/reset/invalidation paths and matching input producers. |
 | Managed-feature policy | Server decision logic beyond the recovered client parser and cache. |
-| Hardware inference | Authoritative meaning of raw value 5; manual selection remains in use. |
+| Hardware inference | The 2026.26.6.5 catalogue labels `GTW_dasHw` raw 5 `TESLA_AP4`. Target producer/layout applicability remains unverified; the scanner reports a candidate separately from configured hardware. |
 | Feature sweep | Cases and combinations not reached before the interrupted run. |
 | Driving visualization flicker | Submitted TX cadence and downstream rendering/receiver behavior. |
-| `APP_w462` engagement refusal | The archived producer and service UI agree on the reason fields. Attribution still needs evidence from the actual event on matching HW4. [Diagnostic evidence](../LLM.md#november-13-eligibility-and-rejection-evidence) |
-| OTA and reconnect | Wi-Fi OTA and passive report delivery verified. Physical replug and AP-mode OTA remain open. [Release evidence](../LLM.md#november-12-diagnostics-and-source-limits) |
+| `APP_w462` engagement refusal | The archived producer and service UI agree on the reason fields. Warning-aligned reason pairs are now captured. Attribution still needs the driver-input timestamp, synchronized eligibility/request values and the actual current HW4 predicate. [Diagnostic evidence](../LLM.md#november-13-eligibility-and-rejection-evidence) |
+| OTA and reconnect | FW 3.0 / UI 0.16.20 diagnostic delivery is verified. This milestone is not a comprehensive OTA, AP-mode or physical-replug reliability test. [Latest evidence](../LLM.md#november-18-21-evidence-update) |
+| Native eligibility | Stored maps-support and vision values are available; missing feature keys, warning-time values and the managed-feature decision producer remain open. |
+| DevMenu | The pictured button exists in the supplied screenshot, but its concrete visibility/enabled binding and callback were not established in the inspected archived build. |
 
 Signal consolidation is complete and independently reviewed: 3 tests, strict parsing and source-pointer checks passed for 55 selected IDs, 37 definitions, 2700 signals and 18 missing definitions. [Profiles](signal-profiles.md).
 

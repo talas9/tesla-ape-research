@@ -26,7 +26,7 @@ The older operational-state emitter was recovered separately. Modern signal defi
 
 Stationary engine OFF→ON→OFF and isolated-feature comparisons showed no reversible changes establishing request acceptance in the measured feedback candidates. The parked visualization request remained stable during a separate observation; this did not reproduce reported driving flicker. A later sweep ended after connection loss, and recovery restored the original settings. The remaining combinations were not tested. [Measurements and recovery](experiments.md).
 
-Board transmission completion is not vehicle acceptance. A matching HW4 receiver-to-status trace remains the missing link between these interventions and their outcome. A submitted-transmission journal and passive diagnostics have been built and reviewed, but are not deployed. [Implementation and next work](evidence-and-open-work.md).
+Board transmission completion is not vehicle acceptance. A matching HW4 receiver-to-status trace remains the missing link between these interventions and their outcome. The submitted-transmission journal and passive diagnostics are deployed. November 18–19 warning windows and a separate November 21 native snapshot now narrow the investigation, without identifying the current HW4 rejection condition. [Latest evidence](../LLM.md#november-18-21-evidence-update). [Implementation and next work](evidence-and-open-work.md).
 
 ## Hardware and applicability matrix
 
@@ -38,7 +38,7 @@ Board transmission completion is not vehicle acceptance. A matching HW4 receiver
 | Historical HW3 platform | Reported region-availability symptoms; no paired comparison. |
 | Nonmatching gateway artifact | Comparative routing, not target-platform forwarding. |
 
-No matching MCU3/HW4 image was available for this investigation. Older APE behavior therefore does not establish HW4 equivalence. Gateway hardware raw value 5 also remains unresolved rather than being assigned a guessed hardware label.
+No matching MCU3/HW4 image was available for this investigation. Older APE behavior therefore does not establish HW4 equivalence. The 2026.26.6.5 reference labels `GTW_dasHw` raw 5 `TESLA_AP4`; this catalogue meaning does not independently prove the target producer or layout. The scanner keeps observed candidate and configured hardware separate.
 
 [Route index](route-index.md) · [corrections](corrections.md) · [methods and source limits](methodology.md)
 

@@ -22,8 +22,8 @@ Each route records the recovered result and the next missing link.
 | R16 Restore | Already-target input produced no modification. | [Experiments](experiments.md). |
 | R17 Assist | Modification/submission behavior recovered. | Different from GUI full-FSD selection or unlock. |
 | R18 Hardware applicability | HW4 live, historical HW3 and HW2.5 source kept distinct. | [Matrix](research-paper.md#hardware-and-applicability-matrix). |
-| R19 Passive diagnostics | Local implementation verified, not deployed. | [Implementation](evidence-and-open-work.md#implementation-state). |
-| R20 Deployment | Not deployed. | Device validation remains. |
+| R19 Passive diagnostics | Deployed; warning-aligned receiver context read back. | [Implementation](evidence-and-open-work.md#implementation-state). |
+| R20 Deployment | FW 3.0 / UI 0.16.20 report delivery verified. | [Latest milestone](../LLM.md#november-18-21-evidence-update); vehicle acceptance remains unproved. |
 | R21 Debug setter | Generic setter/access path partly recovered. | Authoritative GUI propagation/viable override not proved. |
 | R22 EU/DCAS/restart | Feature policy and conditional restart path partly recovered. | External sender/concrete runtime dependencies remain. |
 | R23 Modern specification | Bounded extraction/review completed. | Candidate meanings, not matching HW4 decoder proof. |
@@ -32,10 +32,14 @@ Each route records the recovered result and the next missing link.
 | R26 Visualization | Per-frame source/callback updates recovered. | Downstream rendering/current-HW4 behavior unresolved. |
 | R27 Isolated phases | No stable receiver-candidate changes measured. | [Isolated experiment](experiments.md#isolated-features). |
 | R28 Host CLI | Local tests/review and read-only checks passed. | Not the same harness as the interrupted sweep. |
-| R29 Actual TX journal | Built/reviewed, not deployed. | Submission lifecycle is not ECU acceptance. |
+| R29 Actual TX journal | Deployed; retained source/output pairs inspected. | Submission lifecycle is not ECU acceptance. |
 | R30 Parked observation | Stable visualization during measured window. | [Stationary observation](experiments.md#stationary-visualization); driving flicker open. |
-| R31 Feature feedback | Candidate mapping/implementation verified locally. | Not deployed; matching semantics open. |
+| R31 Feature feedback | Candidate mapping deployed. | Matching HW4 semantics and acceptance remain open. |
 | R32 Consolidation | Verification and independent review complete; no blocking findings. | [Profiles](signal-profiles.md); source network/provenance retained separately. |
-| R33 Hardware inference | Not implemented; raw enum unresolved. | Preserve manual hardware selection. |
+| R33 Hardware inference | Reference enum raw 5 is `TESLA_AP4`; scanner reports a separate observed candidate. | Matching target producer/layout and automatic promotion to effective hardware remain unverified. |
 | R34 Follow-up sweep | Interrupted; original settings restored by verified recovery. | [Recovery](experiments.md#interrupted-follow-up-and-recovery); remaining cases not run. |
 | R35 Upstream interactions | Bounded source review completed. | [References](sources.md); reports remain attributed upstream. |
+
+## November 18–21 follow-up
+
+The [latest evidence update](../LLM.md#november-18-21-evidence-update) adds stored native maps-support values (R02–R04), measured source/output differences (R09/R29), and warning-aligned reason pairs (R12/R19/R31). These are separate observations; the matching HW4 causal path is still open. The DevMenu screenshot investigation did not establish its button binding or callback.
