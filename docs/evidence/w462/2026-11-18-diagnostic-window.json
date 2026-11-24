@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "recording_kind": "sanitized_selected_diagnostic_values",
+  "evidence_date": "2026-11-18",
+  "scanner_firmware": "3.0",
+  "web_ui_version": "0.16.19",
+  "decoder_profile": "modern_2026_dbc_candidate",
+  "reference_release": "2026.26.6.5",
+  "target_layout_verified": false,
+  "event": "APP_w462_selfDrivingUnavailable",
+  "time_origin": "scanner_warning_onset",
+  "absolute_time_included": false,
+  "original_can_payloads_available": false,
+  "alert_history_partial": true,
+  "warning_window_complete": true,
+  "bus_counter_basis": "delta_from_first_retained_sample",
+  "samples": [
+    {
+      "offset_ms": -4666,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 0,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": -3666,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 3424,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": -2666,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 6863,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": -1666,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 10288,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": -666,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 13721,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 0,
+      "warning": "present",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 15971,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 1000,
+      "warning": "present",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 19394,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 2000,
+      "warning": "present",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 22820,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 3002,
+      "warning": "present",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 26260,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 4002,
+      "warning": "present",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 29685,
+      "errors_delta": 0,
+      "drops_delta": 0
+    },
+    {
+      "offset_ms": 5002,
+      "warning": "clear",
+      "running": true,
+      "bus_off": false,
+      "rx_delta": 33117,
+      "errors_delta": 0,
+      "drops_delta": 0
+    }
+  ],
+  "receiver_checkpoints": [
+    {
+      "sample_index": 4,
+      "offset_ms": -666,
+      "autosteer_unavailable_reason": {
+        "code": 91,
+        "age_ms": 527,
+        "available": true,
+        "fresh": true
+      },
+      "acc_unavailable_reason": {
+        "code": 69,
+        "age_ms": 655,
+        "available": true,
+        "fresh": true
+      },
+      "autonomy_unavailable_reason": {
+        "code": 4,
+        "age_ms": 54,
+        "available": true,
+        "fresh": true
+      }
+    },
+    {
+      "sample_index": 5,
+      "offset_ms": 0,
+      "autosteer_unavailable_reason": {
+        "code": 91,
+        "age_ms": 216,
+        "available": true,
+        "fresh": true
+      },
+      "acc_unavailable_reason": {
+        "code": 69,
+        "age_ms": 341,
+        "available": true,
+        "fresh": true
+      },
+      "autonomy_unavailable_reason": {
+        "code": 4,
+        "age_ms": 720,
+        "available": true,
+        "fresh": true
+      }
+    },
+    {
+      "sample_index": 6,
+      "offset_ms": 1000,
+      "autosteer_unavailable_reason": {
+        "code": 91,
+        "age_ms": 236,
+        "available": true,
+        "fresh": true
+      },
+      "acc_unavailable_reason": {
+        "code": 69,
+        "age_ms": 361,
+        "available": true,
+        "fresh": true
+      },
+      "autonomy_unavailable_reason": {
+        "code": 4,
+        "age_ms": 720,
+        "available": true,
+        "fresh": true
+      }
+    }
+  ]
+}
