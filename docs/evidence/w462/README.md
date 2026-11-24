@@ -9,6 +9,8 @@ These are two sanitized recordings extracted from delivered scanner reports, not
 
 The dates identify the evidence/readback records. The November 18 source had no absolute event time. The November 19 event had an absolute time, omitted here for privacy. Neither upload time nor a separate saved bus incident is used to date the warning.
 
+A separate [raw CAN baseline recording](../passive-baseline/README.md) is also available. It predates these firmware 3.0 reports and contains no triggered engagement attempt; it must not be presented as their raw warning trace.
+
 ## What the recordings show
 
 Autosteer reason **91**, ACC reason **69** and autonomy reason **4** are present and fresh at all three checkpoints in both recordings. The reference descriptions for 91 and 69 concern unsupported user settings; they do not identify which setting failed. Both codes already exist before the warning onset. All retained bus samples show running with no bus-off and no increase in the error or drop counters. Delta-zero does not mean that the original cumulative counter was zero or that earlier capture was lossless.
