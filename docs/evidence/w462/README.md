@@ -1,5 +1,11 @@
 # APP_w462 diagnostic recordings
 
+## New raw warning trace — November 25
+
+The [November 25 raw-frame excerpt](raw-2026-11-25/README.md) contains 45 original diagnostic CAN frames across an observed `APP_w462` rise. It adds the raw transition missing from the earlier reports: reason values 91/69/4 are unchanged before and after. This is a separate recording; its firmware version and driver-input time are not supplied by the CSV.
+
+## Earlier decoded warning windows
+
 These are two sanitized recordings extracted from delivered scanner reports, not reconstructed CAN traces. Each retains the complete recorded 11-sample warning/bus window and three selected receiver checkpoints. The JSON files contain numeric diagnostic codes and their ages; the source reports did **not** retain the original CAN payloads or DLCs.
 
 | Recording | Scanner / UI | Warning-relative receiver checkpoints |

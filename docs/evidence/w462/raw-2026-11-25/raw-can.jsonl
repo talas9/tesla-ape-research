@@ -1,0 +1,45 @@
+{"offset_us":93000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":262000,"id":"0x4D1","dlc":8,"data":"00 00 00 00 00 00 00 00","extended":"false"}
+{"offset_us":282000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":553000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 8b 4f 71 00","extended":"false"}
+{"offset_us":673000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":848000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":1263000,"id":"0x4D1","dlc":8,"data":"00 00 00 00 00 00 00 00","extended":"false"}
+{"offset_us":1283000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":1474000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 91 4f 71 00","extended":"false"}
+{"offset_us":1558000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":1593000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":2179000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 91 4f 71 00","extended":"false"}
+{"offset_us":2217000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":2261000,"id":"0x4D1","dlc":8,"data":"00 00 00 00 00 00 00 00","extended":"false"}
+{"offset_us":2283000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":2297000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":2303000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 91 4f 71 00","extended":"false"}
+{"offset_us":2343000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":2714000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 91 4f 71 00","extended":"false"}
+{"offset_us":2797000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":2833000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":2877000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 91 4f 71 00","extended":"false"}
+{"offset_us":2963000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":3262000,"id":"0x4D1","dlc":8,"data":"00 20 00 00 00 00 00 00","extended":"false"}
+{"offset_us":3283000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":3687000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":3814000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":3987000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 8b 4f 71 00","extended":"false"}
+{"offset_us":4153000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":4193000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 8b 4f 71 00","extended":"false"}
+{"offset_us":4261000,"id":"0x4D1","dlc":8,"data":"00 20 00 00 00 00 00 00","extended":"false"}
+{"offset_us":4283000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":4313000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":4897000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":5017000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":5262000,"id":"0x4D1","dlc":8,"data":"00 20 00 00 00 00 00 00","extended":"false"}
+{"offset_us":5282000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":5477000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":5517000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 86 4f 71 00","extended":"false"}
+{"offset_us":5558000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}
+{"offset_us":5687000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":6261000,"id":"0x4D1","dlc":8,"data":"00 20 00 00 00 00 00 00","extended":"false"}
+{"offset_us":6283000,"id":"0x191","dlc":2,"data":"10 00","extended":"false"}
+{"offset_us":6413000,"id":"0x5D9","dlc":8,"data":"02 00 00 00 83 4f 71 00","extended":"false"}
+{"offset_us":6538000,"id":"0x5D9","dlc":8,"data":"b0 05 03 00 00 00 00 00","extended":"false"}

@@ -2,7 +2,7 @@
 
 Full Self-Driving (Supervised) asked for updated navigation maps. Traffic Light and Stop Sign Control (TLSSC) said the region was unsupported. I followed both messages through the touchscreen code, then compared the recovered paths with passive observations from a custom C6 board with a CAN transceiver. An LLM wrote this research and documentation.
 
-Evidence through November 21, 2026; publication updated November 23. The newer observations narrow the investigation but do not establish the current HW4 rejection predicate.
+Evidence through November 25, 2026; publication updated November 25. The newer observations narrow the investigation but do not establish the current HW4 rejection predicate.
 
 ## What the research found
 
@@ -61,6 +61,8 @@ flowchart LR
 The November 19 `APP_w462` window contained 11 bus samples with no new error-count growth, drops or bus-off. The reason pair already existed before the warning; no driver-input timestamp was captured. Separately, a source/output journal measured a request-bit combination that differs from the archived stock encoder relationship. Neither observation proves acceptance or the cause of refusal. [Latest evidence and limits](LLM.md#november-18-21-evidence-update)
 
 The [sanitized warning recordings](docs/evidence/w462/README.md) publish both 11-sample windows and selected diagnostic values/ages as JSON. They contain no original CAN frame payloads or driver-input timestamp. A separate [raw diagnostic baseline](docs/evidence/passive-baseline/README.md) publishes all 122 retained frames from a no-attempt observation.
+
+The new [November 25 raw warning trace](docs/evidence/w462/raw-2026-11-25/README.md) captures `APP_w462` changing from clear to set. Its 45 retained diagnostic frames show reason values 91/69/4 already present before the warning and unchanged afterward. It provides original payloads, but no driver-input marker or exact current HW4 rejection predicate.
 
 ## Read further
 
